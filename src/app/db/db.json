@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "userID": "1",
+      "firstName": "hamada",
+      "lastName": "hamda",
+      "email": "sadadsaa@hotmail.com",
+      "phoneNumber": "000000",
+      "password": "0000000"
+    }
+  ],
+  "movies": [
+    {
+      "id": "1",
+      "title": "dsadsad",
+      "rating": "1",
+      "reviews": [
+        {
+          "userID": "1",
+          "body": "adssdadsda"
+        }
+      ],
+      "seats": "hardCoded for now",
+      "movie_timing": ["11:30PM", "12:00AM"]
+    }
+  ]
+}
