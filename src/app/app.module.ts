@@ -7,10 +7,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
-import { SeatsComponent } from './components/seats/seats.component';
 
 @NgModule({
-  declarations: [AppComponent, PageNotFoundComponent, HeaderComponent, HomeComponent, SeatsComponent],
+  declarations: [
+    AppComponent,
+    PageNotFoundComponent,
+    HeaderComponent,
+    HomeComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
