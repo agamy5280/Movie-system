@@ -1,0 +1,93 @@
+.seat-map {
+  width: 35%; /* Adjust based on screen width */
+  margin: 50px auto;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  .screen {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 50%; /* Adjust the left position as needed */
+    transform: translateX(-50%);
+    height: 250px; /* Adjust the height of the screen as needed */
+    width: 90%; /* Adjust the width of the screen as needed */
+    background-color: white; /* Adjust the color of the screen as needed */
+    border-radius: 3px;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+  }
+  .seats-container {
+    margin-top: 300px;
+    display: flex;
+    .left-seats {
+      margin-right: 30px;
+    }
+    .right-seats {
+      margin-left: 30px;
+    }
+    .row {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  background-color: #ddd;
+  margin: 5px;
+  border-radius: 5px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.empty {
+  background-color: #fff;
+}
+
+.occupied {
+  background-color: #8b322c; /* Red color for occupied seats */
+}
+.selected {
+  background-color: #1a4d2e;
+}
+.seat-info {
+  background-color: #deac80;
+  text-align: center;
+  width: 20%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 8px;
+
+  .seat-oriantation-info {
+    display: flex;
+    justify-content: space-between;
+    .seat-empty-info {
+      @extend .seat;
+      background-color: #ddd;
+    }
+
+    .seat-selected-info {
+      @extend .seat;
+      background-color: #1a4d2e;
+    }
+
+    .seat-occupied-info {
+      @extend .seat;
+      background-color: #8b322c;
+    }
+  }
+
+  p {
+    margin: 10px 0;
+    color: #524c42;
+    font-weight: bold;
+  }
+}

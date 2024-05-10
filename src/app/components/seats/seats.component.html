@@ -1,0 +1,66 @@
+<div class="seat-info">
+  <div class="seat-oriantation-info">
+    <div class="seat-empty-info"></div>
+    <p>N/A</p>
+  </div>
+  <div class="seat-oriantation-info">
+    <div class="seat-selected-info"></div>
+    <p>Selected</p>
+  </div>
+  <div class="seat-oriantation-info">
+    <div class="seat-occupied-info"></div>
+    <p>Occupied</p>
+  </div>
+</div>
+<div class="seat-map">
+  <!-- Screen  -->
+  <div class="screen"><p>MY MOVIE</p></div>
+  <div class="seats-container">
+    <!-- Left seats -->
+    <div class="left-seats">
+      <div *ngFor="let row of leftSeats; let i = index" class="row">
+        <div
+          *ngFor="let seat of row; let j = index"
+          class="seat"
+          [ngClass]="{
+            occupied: seat.occupied,
+            selected: seat.selected,
+          }"
+          (click)="seatClicked(seat)"
+        ></div>
+      </div>
+    </div>
+    <div class="middle-seats">
+      <!-- Middle seats -->
+      <div *ngFor="let row of middleSeats; let i = index" class="row">
+        <div
+          *ngFor="let seat of row; let j = index"
+          class="seat"
+          [ngClass]="{
+            occupied: seat.occupied,
+            selected: seat.selected,
+          }"
+          (click)="seatClicked(seat)"
+        ></div>
+      </div>
+    </div>
+    <!-- Right seats -->
+    <div class="right-seats">
+      <div *ngFor="let row of rightSeats; let i = index" class="row">
+        <div
+          *ngFor="let seat of row; let j = index"
+          class="seat"
+          [ngClass]="{
+            occupied: seat.occupied,
+            selected: seat.selected,
+          }"
+          (click)="seatClicked(seat)"
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="seat-details">
+  <p></p>
+  <button (click)="showSelectedSeats()">CLICK</button>
+</div>

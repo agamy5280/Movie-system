@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --color-background: #262729;
-    --color-text: white;
+  background-color: #262729;
+  --color-text: white;
 }
-*{
-    background-color: var(--color-background);
-    color: var(--color-text);
-    font-family: "Effra", Tahoma, Arial, Helvetica, sans-serif;
+* {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: "Effra", Tahoma, Arial, Helvetica,  sans-serif;
 }
