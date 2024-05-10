@@ -50,4 +50,9 @@ export class SeatsComponent {
   showSelectedSeats() {
     console.log(this.selectedSeats);
   }
+  calculateTicketPrice() {
+    const selectedCount = this.selectedSeats.length;
+
+    return selectedCount * 10;
+  }
 }

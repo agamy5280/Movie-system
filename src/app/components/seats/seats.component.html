@@ -14,7 +14,9 @@
 </div>
 <div class="seat-map">
   <!-- Screen  -->
-  <div class="screen"><p>MY MOVIE</p></div>
+  <div class="screen">
+    <img src="../../../assets/images/movie-6.jpg" alt="Movie Image" />
+  </div>
   <div class="seats-container">
     <!-- Left seats -->
     <div class="left-seats">
@@ -61,6 +63,12 @@
   </div>
 </div>
 <div class="seat-details">
-  <p></p>
-  <button (click)="showSelectedSeats()">CLICK</button>
+  <div class="selected-seats">
+    <span id="selected-count">{{ selectedSeats.length }}</span> Seats Selected
+  </div>
+  <div class="total-price">
+    Total Price:
+    <span id="total-price">{{ calculateTicketPrice() | currency }}</span>
+  </div>
+  <button (click)="showSelectedSeats()">Confirm</button>
 </div>
