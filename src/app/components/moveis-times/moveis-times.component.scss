@@ -62,7 +62,7 @@ h3.weekday::before{
     margin-top: 4%;
 }
 .location-bar p{
-    color: rgb(100, 100, 100);
+    color: rgb(150, 150, 150) !important;
 }
 .location-bar p.selected{
     color: #33c5ff !important;
@@ -82,7 +82,7 @@ h3.weekday::before{
     height: 1px;
     width: 100%;
     position: absolute;
-    top: -10px;
+    top: -15px;
 }
 .location-bar ul::after{
     background-color: rgb(60, 60, 60);
@@ -91,7 +91,7 @@ h3.weekday::before{
     height: 1px;
     width: 100%;
     position: absolute;
-    top: 33px;
+    top: 30px;
 }
 .location-bar ul p:hover{
     color: #009ddb !important;
