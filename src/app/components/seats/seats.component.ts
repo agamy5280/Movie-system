@@ -1,19 +1,45 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
   selector: 'app-seats',
   templateUrl: './seats.component.html',
   styleUrl: './seats.component.scss',
 })
-export class SeatsComponent {
+export class SeatsComponent implements OnInit {
   leftSeats: any[][] = [];
   middleSeats: any[][] = [];
   rightSeats: any[][] = [];
   selectedSeats: string[] = [];
-  constructor() {
+  movieID: any;
+  movieImg: any;
+  movieTime: any;
+  movieData: any;
+  constructor(
+    private route: ActivatedRoute,
+    private _router: Router,
+    private movieService: MovieService
+  ) {
     this.leftSeats = this.generateSeatData(5, 4);
     this.middleSeats = this.generateSeatData(5, 8);
     this.rightSeats = this.generateSeatData(5, 4);
+    // checking if path seats is active.
+    if (_router.url == '/seats') {
+      this._router.navigate(['movies']);
+    }
+  }
+  ngOnInit(): void {
+    this.route.queryParams.subscribe(async (params) => {
+      this.movieID = params['id'];
+      this.movieTime = params['time'];
+      (await this.movieService.getMovieByID(this.movieID)).subscribe({
+        next: (data) => {
+          this.movieData = data;
+          this.movieImg = data.movie_image;
+        },
+      });
+    });
   }
 
   generateSeatData(rows: number, seatsPerRow: number): any[][] {

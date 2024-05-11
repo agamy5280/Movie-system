@@ -9,8 +9,17 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'movies', component: HomeComponent },
   { path: 'movie/:id', component: MoviePageComponent },
-  { path: 'seats', component: SeatsComponent },
-  { path: 'times/:id', component: MoveisTimesComponent},
+  {
+    path: 'seats',
+    component: SeatsComponent,
+    children: [
+      {
+        path: ':time/:id',
+        component: SeatsComponent,
+      },
+    ],
+  },
+  { path: 'times/:id', component: MoveisTimesComponent },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
