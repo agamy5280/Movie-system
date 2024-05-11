@@ -18,8 +18,8 @@
 .btn{
     color: white;
     background-color: #d40f7d;
-    height: 30px;
-    height: 1.375rem;
+    height: 20px !important;
+    height: 1.5rem;
     padding: 0 10px 0 14px;
     font-size: 14px;
     margin-right: 10px;
@@ -55,7 +55,7 @@ h3.weekday::before{
     height: 3px;
     width: 60px;  
     position: absolute;
-    top: -10px;
+    top: -15px;
 }
 .location-bar{
     margin-bottom: 1%;
@@ -65,7 +65,7 @@ h3.weekday::before{
     color: rgb(100, 100, 100);
 }
 .location-bar p.selected{
-    color: #33c5ff;
+    color: #33c5ff !important;
 }
 
 .location-bar ul{
@@ -94,7 +94,7 @@ h3.weekday::before{
     top: 33px;
 }
 .location-bar ul p:hover{
-    color: #009ddb;
+    color: #009ddb !important;
     cursor: pointer;
 }
 .movie-name{
@@ -112,5 +112,5 @@ h3.weekday::before{
     height: 3px;
     width: 60px;  
     position: absolute;
-    top: -10px;
+    top: -15px;
 }
