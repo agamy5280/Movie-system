@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-$effra-font-path: 'assets/erraf.ttf'; // Path to your font file
+$effra-font-path: "assets/erraf.ttf"; // Path to your font file
 @font-face {
-    font-family: 'Effra';
-    src: url('#{$effra-font-path}') format('truetype'); // Specify the format as truetype
+  font-family: "Effra";
+  src: url("#{$effra-font-path}") format("truetype"); // Specify the format as truetype
 }
 :root {
   --color-background: #262729;
@@ -10,6 +10,5 @@ $effra-font-path: 'assets/erraf.ttf'; // Path to your font file
 }
 * {
   background-color: var(--color-background);
-  color: var(--color-text) !important;
-  font-family: "Effra", Tahoma, Arial, Helvetica, sans-serif;
+  color: var(--color-text);
 }
