@@ -7,7 +7,24 @@
       "email": "sadadsaa@hotmail.com",
       "phoneNumber": "000000",
       "password": "0000000"
+    },
+    {
+      "id": "2",
+      "firstName": "ali",
+      "lastName": "ahemd",
+      "email": "alii@hotmail.com",
+      "phoneNumber": "000000",
+      "password": "123456789"
+    },
+    {
+      "id": "3",
+      "firstName": "mahmoud",
+      "lastName": "ahmed",
+      "email": "mahmed@hotmail.com",
+      "phoneNumber": "000000",
+      "password": "654654"
     }
+
   ],
   "movies": [
     {

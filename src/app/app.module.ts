@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { MoveisTimesComponent } from './components/moveis-times/moveis-times.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginPageComponent } from './components/login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     SeatsComponent,
     MoveisTimesComponent,
+    LoginPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
