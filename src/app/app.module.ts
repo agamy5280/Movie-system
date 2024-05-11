@@ -19,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     SeatsComponent,
     MoveisTimesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule,HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

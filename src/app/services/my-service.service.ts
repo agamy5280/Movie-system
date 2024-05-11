@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,10 @@ import { Injectable } from '@angular/core';
 })
 export class MyServiceService {
 
-  constructor() { }
+  constructor(private readonly http:HttpClient) { }
+  private readonly DB_URL = "http://localhost:3000/movies";
+
+  getShowTimes(id:number){
+    return this.http.get(this.DB_URL + "/" + id)
+  }
 }

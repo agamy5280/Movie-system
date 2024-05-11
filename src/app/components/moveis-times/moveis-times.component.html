@@ -1,1 +1,30 @@
-<p>moveis-times works!</p>
+<div class="container">
+    <h2 class="movie-name">{{movieName}}</h2>
+    <div class="row location-bar">
+        <ul>
+            <li>
+                <p class="selected">Today</p>
+            </li>
+            <li>
+                <p>Tomorrow</p>
+            </li>
+            <li>
+                <p>Mon 13 May</p>
+            </li>
+            <li>
+                <p>Tue 14 May</p>
+            </li>
+        </ul>
+    </div>
+
+
+
+        <div class="row timerow" *ngFor="let day of times" >
+            <h3 class="weekday">{{day.loaction}}</h3>
+            <div class="col timecol">
+                @for (time of day.times; track $index) {
+                    <a class="btn"  (click) = "sendParams(time)" role="button">{{time}}</a>
+                }
+            </div>
+       
+</div>
