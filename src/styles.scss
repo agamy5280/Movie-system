@@ -10,6 +10,6 @@ $effra-font-path: 'assets/erraf.ttf'; // Path to your font file
 }
 * {
   background-color: var(--color-background);
-  color: var(--color-text) !important;
+  color: var(--color-text);
   font-family: "Effra", Tahoma, Arial, Helvetica, sans-serif;
 }

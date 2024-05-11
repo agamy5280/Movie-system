@@ -9,12 +9,14 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './moveis-times.component.scss'
 })
 export class MoveisTimesComponent implements OnInit{
-  id = 1
+  id = 0
   movieName = "";
   times:any;
   
   constructor(private movieService:MyServiceService,  private route:ActivatedRoute, private router:Router){
-    console.log(this.route.url.subscribe());
+    route.url.subscribe({
+      next: (data) => this.id = Number(data[data.length-1].path)
+    })
   }
   sendParams(time:any){
     this.router.navigate(["/seats"], {queryParams: {time: time, id: this.id}})
