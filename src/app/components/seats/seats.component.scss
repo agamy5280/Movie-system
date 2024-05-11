@@ -1,4 +1,8 @@
+* {
+  font-family: sans-serif;
+}
 .title {
+  margin-top: 10px;
   .choose-seats {
     display: flex;
     text-align: center;
@@ -92,6 +96,7 @@
   .seat-oriantation-info {
     display: flex;
     justify-content: space-between;
+    background-color: transparent;
     .seat-empty-info {
       @extend .seat;
       background-color: #ddd;
@@ -108,10 +113,12 @@
     }
   }
 
-  p {
+  .seat-status {
     margin: 10px 0;
     color: #ffffff;
     font-weight: bold;
+    text-transform: uppercase;
+    background-color: #393e46;
   }
 }
 .seat-details {
@@ -129,11 +136,13 @@
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
+    background-color: transparent;
   }
 
   .selected-seats span,
   .total-price span {
     color: #7aba78;
+    background-color: transparent;
   }
 
   .total-price {
