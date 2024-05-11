@@ -5,7 +5,7 @@ import { MyServiceService } from '../../services/my-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-moveis-times',
-  templateUrl: './moveis-times.component.html',
+  templateUrl: './moveis-times.component.html', 
   styleUrl: './moveis-times.component.scss'
 })
 export class MoveisTimesComponent implements OnInit{
