@@ -1,1 +1,25 @@
-<p>home works!</p>
+<div class="home pt-3">
+    <div class="now-showing">
+      <h1 class="what">What&#39;s On</h1>
+        <p class="dashed pb-2"></p>
+      <div class="container p-0">
+          <div class="row">
+            @for(movie of allMovies ; track movie.id){
+              <div class="col-sm-3">
+                  <div class="card border-0 pb-2">
+                      <img class="card-img-top" src="assets/images/{{movie.movie_image}}" alt="movie image">
+                      <div class="card-body ps-1">
+                        <h5 class="card-title">{{movie.title.toLowerCase()}}</h5>    
+                        <p class="">
+                          <img class="classification" src="assets/images/{{movie.classification}}.png">
+                        </p>
+                        <p class="card-text"><span class="fw-bold">Language:</span> {{movie.Language}}</p>
+                        <a href="#" class="btn btn-secondary btn-lg">Showtimes</a>
+                      </div>
+                    </div>
+              </div>
+            }
+          </div>
+        </div>
+    </div>
+</div>
