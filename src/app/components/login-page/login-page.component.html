@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form [formGroup]="myForm" class="form">
+                <div class="form-group d-flex m-3">
+                    <input formControlName="email" class="form-control" type="text">
+                    <p *ngIf="!emailValid">email Required</p>
+
+                </div>
+
+
+
+
+
+                <div class="form-group d-flex m-3">
+                    <input formControlName="pass" class="form-control" type="text">
+                </div>
+
+                <div class="text-center m-3">
+                    <input (click)="Add()" class="btn btn-outline-success" type="submit" value="log-in">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
