@@ -1,7 +1,7 @@
 <div class="title">
   <div class="choose-seats">
-    <img src="../../../assets/images/armchair.png" />
-    <h2>Choose Seats</h2>
+    <img class="seat-img" src="../../../assets/images/armchair.png" />
+    <h2 class="title-seats">Choose Seats</h2>
   </div>
 </div>
 <div class="seat-info">
@@ -21,12 +21,16 @@
 <div class="seat-map">
   <!-- Screen  -->
   <div class="screen">
-    <img src="../../../assets/images/movie-6.jpg" alt="Movie Image" />
+    <img
+      class="screen-img"
+      src="../../../assets/images/movie-6.jpg"
+      alt="Movie Image"
+    />
   </div>
   <div class="seats-container">
     <!-- Left seats -->
     <div class="left-seats">
-      <div *ngFor="let row of leftSeats; let i = index" class="row">
+      <div *ngFor="let row of leftSeats; let i = index" class="row-seat">
         <div
           *ngFor="let seat of row; let j = index"
           class="seat"
@@ -40,7 +44,7 @@
     </div>
     <div class="middle-seats">
       <!-- Middle seats -->
-      <div *ngFor="let row of middleSeats; let i = index" class="row">
+      <div *ngFor="let row of middleSeats; let i = index" class="row-seat">
         <div
           *ngFor="let seat of row; let j = index"
           class="seat"
@@ -54,7 +58,7 @@
     </div>
     <!-- Right seats -->
     <div class="right-seats">
-      <div *ngFor="let row of rightSeats; let i = index" class="row">
+      <div *ngFor="let row of rightSeats; let i = index" class="row-seat">
         <div
           *ngFor="let seat of row; let j = index"
           class="seat"
@@ -76,5 +80,5 @@
     Total Price:
     <span id="total-price">{{ calculateTicketPrice() | currency }}</span>
   </div>
-  <button (click)="showSelectedSeats()">Confirm</button>
+  <button class="confirm-btn" (click)="showSelectedSeats()">Confirm</button>
 </div>

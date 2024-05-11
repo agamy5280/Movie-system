@@ -4,13 +4,13 @@
     text-align: center;
     justify-content: center;
     flex-direction: row;
-    img {
+    .seat-img {
       width: 24px;
       height: 24px;
-      margin-top: 1.5rem;
+      margin-top: 1vh;
       margin-right: 0.8rem;
     }
-    h2 {
+    .title-seats {
       color: #7aba78;
       text-transform: uppercase;
     }
@@ -35,7 +35,7 @@
     border-radius: 3px;
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
     overflow: hidden;
-    img {
+    .screen-img {
       max-width: 100%;
       max-height: 100%;
       width: 100%;
@@ -51,7 +51,7 @@
     .right-seats {
       margin-left: 30px;
     }
-    .row {
+    .row-seat {
       display: flex;
       justify-content: center;
     }
@@ -140,7 +140,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  button {
+  .confirm-btn {
     display: block;
     width: fit-content;
     padding: 10px 20px;
@@ -153,7 +153,7 @@
     margin: 0 auto;
   }
 
-  button:hover {
+  .confirm-btn:hover {
     background-color: #1a4d2e;
   }
 }
