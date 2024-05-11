@@ -9,7 +9,9 @@ export class MovieService {
   constructor(private http: HttpClient) {
     this.DB_LINK = 'http://localhost:3000/movies';
   }
-
+  getShowTimes(id: number) {
+    return this.http.get(this.DB_LINK + '/' + id);
+  }
   getAllMovies() {
     return this.http.get(this.DB_LINK);
   }
