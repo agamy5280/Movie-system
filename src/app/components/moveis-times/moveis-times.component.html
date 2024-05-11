@@ -22,8 +22,8 @@
         <div class="row timerow" *ngFor="let day of times" >
             <h3 class="weekday">{{day.loaction}}</h3>
             <div class="col timecol">
-                @for (item of day.times; track $index) {
-                    <a class="btn" routerLink="/seats" [queryParams]="{time:'{{item}}', name:'{{movieName}}'}" role="button">{{item}}</a>
+                @for (time of day.times; track $index) {
+                    <a class="btn"  (click) = "sendParams(time)" role="button">{{time}}</a>
                 }
             </div>
        

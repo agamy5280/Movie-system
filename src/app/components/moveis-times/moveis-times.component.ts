@@ -2,22 +2,24 @@
 import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { MyServiceService } from '../../services/my-service.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-moveis-times',
   templateUrl: './moveis-times.component.html',
   styleUrl: './moveis-times.component.scss'
 })
 export class MoveisTimesComponent implements OnInit{
-  id = 0
+  id = 1
   movieName = "";
+  times:any;
   
-  constructor(private movieService:MyServiceService,  route:ActivatedRoute){
-    this.id = route.snapshot.params["id"];
+  constructor(private movieService:MyServiceService,  private route:ActivatedRoute, private router:Router){
+    console.log(this.route.url.subscribe());
+  }
+  sendParams(time:any){
+    this.router.navigate(["/seats"], {queryParams: {time: time, id: this.id}})
   }
   
-  
-  times:any;
   // {location:string, times:string[]}[] = [
   //   {
   //     location: "City Center Almaza",
