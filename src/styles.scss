@@ -5,11 +5,11 @@ $effra-font-path: 'assets/erraf.ttf'; // Path to your font file
     src: url('#{$effra-font-path}') format('truetype'); // Specify the format as truetype
 }
 :root {
-  background-color: #262729;
+  --color-background: #262729;
   --color-text: white;
 }
 * {
   background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: "Effra", Tahoma, Arial, Helvetica,  sans-serif;
+  color: var(--color-text) !important;
+  font-family: "Effra", Tahoma, Arial, Helvetica, sans-serif;
 }
