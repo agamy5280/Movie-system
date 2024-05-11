@@ -52,7 +52,6 @@ export class SeatsComponent {
   }
   calculateTicketPrice() {
     const selectedCount = this.selectedSeats.length;
-
     return selectedCount * 10;
   }
 }
