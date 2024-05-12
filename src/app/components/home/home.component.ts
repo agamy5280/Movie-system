@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
       },
     });
   }
-  navigateToMoviePage(id: any): void {
+  navigateToMoviePage(id: any) {
     this.router.navigate(['/movie'], {
       queryParams: { id: id },
     });

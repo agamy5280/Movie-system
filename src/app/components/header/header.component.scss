@@ -5,6 +5,7 @@ $--nav-bar-background: black ;
 }
 .main-nav{
     color: var(--color-text) !important;
+    padding: 20px;
 }
 .container-main{
     max-width: 950px;
@@ -23,12 +24,4 @@ $--nav-bar-background: black ;
     height: 40px;
     width: 120px;
 }
-// upper nav
 
-.upper-nav{
-    background-color:rgb(19, 19, 19);
-    // background-size: 2940px 70px;
-}
-.trans{
-    background-color: transparent !important;
-}
