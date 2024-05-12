@@ -9,8 +9,7 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'movies', component: HomeComponent },
-  // { path: 'movie', component: MoviePageComponent },
-  { path: 'movie/:id', component: MoviePageComponent },
+  { path: 'movie', component: MoviePageComponent },
   {
     path: 'seats',
     component: SeatsComponent,

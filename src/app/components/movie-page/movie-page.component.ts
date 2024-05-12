@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
   selector: 'app-movie-page',
@@ -8,11 +9,38 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./movie-page.component.scss'] // Use styleUrls instead of styleUrl
 })
 export class MoviePageComponent {
-  constructor(private sanitizer: DomSanitizer, private route : ActivatedRoute) {
-    // const id = this.route.snapshot.params['id'];
+
+  Mdata:any = [];
+  movieID:any;
+  movieTrailerCode: any = [];
+  
+
+  constructor(private sanitizer: DomSanitizer, private route : ActivatedRoute,private movieService: MovieService) {
     // =>> url =>> movie/1
    }
-  getSafeUrl(url: string): SafeResourceUrl {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  } 
+  
+
+    ngOnInit(): void{
+      this.route.queryParams.subscribe(async(params)=>{
+        this.movieID = params['id'];
+        (await this.movieService.getMovieByID(this.movieID)).subscribe({
+          next: (data: any) => {
+            this.Mdata=data;
+            this.movieTrailerCode = data.trailer_youtube_link
+            console.log(this.movieTrailerCode)
+            console.log(this.Mdata)
+            
+            
+          },
+        });
+
+      })
+    }
+
+
+    getSafeUrl(url: string): SafeResourceUrl {
+    
+      return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    } 
+
 }
