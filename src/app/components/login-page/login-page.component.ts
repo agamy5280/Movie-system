@@ -44,7 +44,7 @@ export class LoginPageComponent implements OnInit {
       if (user.email==emaill &&  user.password == pass ){
     
          console.log(user.email,user.password);
-         this.server.login=true
+         this.server.login=true;
          
          this.router.navigate(['/']);       
       }
