@@ -7,10 +7,12 @@ import { MoveisTimesComponent } from './components/moveis-times/moveis-times.com
 import { HomeComponent } from './components/home/home.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { AuthGuard } from './guard/auth-guard.guard';
+import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'movies', component: HomeComponent },
   { path: 'movie', component: MoviePageComponent },
+  {path: 'profile', component: ProfileEditComponent},
   {
     path: 'seats',
     component: SeatsComponent,
