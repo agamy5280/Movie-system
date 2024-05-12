@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MoveisTimesComponent } from './components/moveis-times/moveis-times.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { LoginPageComponent } from './components/login-page/login-page.component
     SeatsComponent,
     MoveisTimesComponent,
     LoginPageComponent,
+    ProfileEditComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
