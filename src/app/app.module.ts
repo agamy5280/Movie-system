@@ -11,6 +11,7 @@ import { MoveisTimesComponent } from './components/moveis-times/moveis-times.com
 import { HttpClientModule } from '@angular/common/http';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ProfileEditComponent } from './components/profile-edit/profile-edit.com
     MoveisTimesComponent,
     LoginPageComponent,
     ProfileEditComponent,
+    RegisterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
