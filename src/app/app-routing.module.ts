@@ -6,6 +6,7 @@ import { MoviePageComponent } from './components/movie-page/movie-page.component
 import { MoveisTimesComponent } from './components/moveis-times/moveis-times.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import { AuthGuard } from './guard/auth-guard.guard';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'movies', component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   {
     path: 'seats',
     component: SeatsComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: ':time/:id',
