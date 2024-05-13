@@ -25,7 +25,7 @@ const routes: Routes = [
       },
     ],
   },
-  { path: 'times/:id', component: MoveisTimesComponent },
+  { path: 'times', component: MoveisTimesComponent },
   { path: 'log-in', component: LoginPageComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
