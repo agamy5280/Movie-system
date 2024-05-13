@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MovieService } from '../../services/movie.service';
 
 @Component({
@@ -15,7 +15,9 @@ export class MoviePageComponent {
   movieTrailerCode: any = [];
   
 
-  constructor(private sanitizer: DomSanitizer, private route : ActivatedRoute,private movieService: MovieService) {
+  constructor(private sanitizer: DomSanitizer, private route : ActivatedRoute,private movieService: MovieService,
+    private router: Router
+  ) {
     // =>> url =>> movie/1
    }
   
@@ -42,5 +44,11 @@ export class MoviePageComponent {
     
       return this.sanitizer.bypassSecurityTrustResourceUrl(url);
     } 
+
+    sendParams() {
+      this.router.navigate(['/times'], {
+        queryParams: { id: this.movieID },
+      });
+    }
 
 }
