@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UsersService } from '../../services/users.service';
 import { of } from 'rxjs';
@@ -31,8 +31,8 @@ export class LoginPageComponent implements OnInit {
 
   }
     myForm = new FormGroup({
-    email: new FormControl("",[Validators.required,Validators.email]),
-    pass: new FormControl(null,[Validators.min(20), Validators.max(30)])
+    email: new FormControl("",[Validators.required,Validators.email,Validators.required]),
+    pass: new FormControl(null,[Validators.minLength(8), Validators.maxLength(20),Validators.required])
   })
 
   Add(){
@@ -56,10 +56,32 @@ export class LoginPageComponent implements OnInit {
 
    
   }
+
+
+
+
+
+
+
+  
   get emailValid(){
     return this.myForm.controls["email"].valid;
   }
   get PassValid(){
     return this.myForm.controls["pass"].valid;
+
   }
+
+
+  @Input() label: string = ''; // Label for the password field (optional)
+  @Output() passwordChange = new EventEmitter<string>();
+
+  showPassword = false;
+
+  toggleShowPassword() {
+    this.showPassword = !this.showPassword;
+
+
+    
+}
 }
