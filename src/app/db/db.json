@@ -54,13 +54,6 @@
         }
       ],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
-      ],
       "show_times": [
         {
           "loaction": "City Center Almaza",
@@ -104,12 +97,24 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -128,12 +133,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -152,12 +184,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -176,12 +235,23 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -200,12 +270,16 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        }
+       
       ]
     },
     {
@@ -224,12 +298,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -248,12 +349,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -272,12 +400,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -296,12 +451,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -320,12 +502,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -344,12 +553,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     }
   ]
