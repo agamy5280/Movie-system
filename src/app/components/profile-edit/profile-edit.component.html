@@ -11,23 +11,125 @@
             <form [formGroup]="myform" class="form">
                 <div class="form-group d-flex m-3">
                     <label class="w-25">First Name</label>
-                    <input formControlName="FirstName" class="form-control" type="text">
+                    <input formControlName="FirstName" class="form-control" type="text" [(ngModel)]="Udata.FirstName">
+
+                    <ng-container *ngIf="myform.controls['FirstName'].touched">
+                        <p
+                          class="invalid-info"
+                          *ngIf="myform.controls['FirstName']?.errors?.['required']"
+                        >
+                          Please type your First Name!
+                        </p>
+                      </ng-container>
+                      <ng-container *ngIf="myform.controls['FirstName'].touched">
+                        <p
+                          class="invalid-info"
+                          *ngIf="myform.controls['FirstName']?.errors?.['pattern']"
+                        >
+                        First Name must not contains numbers!
+                        </p>
+                      </ng-container>
+                      <ng-container *ngIf="myform.controls['FirstName'].touched">
+                        <p
+                          class="invalid-info"
+                          *ngIf="myform.controls['FirstName']?.errors?.['minLength']"
+                        >
+                        First Name must be at least 3 letters!
+                        </p>
+                      </ng-container>
                 </div>
                 <div class="form-group d-flex m-3">
                     <label class="w-25">Last Name</label>
-                    <input formControlName="LastName" class="form-control" type="text">
+                    <input formControlName="LastName" class="form-control" type="text" [(ngModel)]="Udata.LastName">
+                    <ng-container *ngIf="myform.controls['LastName'].touched">
+                        <p
+                          class="invalid-info"
+                          *ngIf="myform.controls['LastName']?.errors?.['required']"
+                        >
+                          Please type your Last Name!
+                        </p>
+                      </ng-container>
+                      <ng-container *ngIf="myform.controls['LastName'].touched">
+                        <p
+                          class="invalid-info"
+                          *ngIf="myform.controls['LastName']?.errors?.['pattern']"
+                        >
+                          Last Name must not contains numbers!
+                        </p>
+                      </ng-container>
+                      <ng-container *ngIf="myform.controls['LastName'].touched">
+                        <p
+                          class="invalid-info"
+                          *ngIf="myform.controls['LastName']?.errors?.['minLength']"
+                        >
+                          Last Name must be at least 3 letters!
+                        </p>
+                      </ng-container>
                 </div>
                 <div class="form-group d-flex m-3">
-                    <label class="w-25">age</label>
-                    <input formControlName="age" class="form-control" type="number">
+                    <label class="w-25">Phone Number</label>
+                    <input formControlName="phoneNumber" class="form-control" type="number"[(ngModel)]="Udata.phoneNumber">
+
+                    <ng-container *ngIf="myform.controls['phoneNumber'].touched">
+                        <p
+                          class="invalid-info"
+                          *ngIf="myform.controls['phoneNumber']?.errors?.['required']"
+                        >
+                          Please type your phone number!
+                        </p>
+                      </ng-container>
+                      <ng-container *ngIf="myform.controls['phoneNumber'].touched">
+                        <p
+                          class="invalid-info"
+                          *ngIf="myform.controls['phoneNumber']?.errors?.['pattern']"
+                        >
+                          Phone number must be digits!
+                        </p>
+                      </ng-container>
+
+                      <ng-container *ngIf="myform.controls['phoneNumber'].touched">
+                        <p
+                          class="invalid-info"
+                          *ngIf="myform.controls['phoneNumber']?.errors?.['min']"
+                        >
+                          Phone number must start with 01!
+                        </p>
+                      </ng-container>
+
+                      <ng-container *ngIf="myform.controls['phoneNumber'].touched">
+                        <p
+                          class="invalid-info"
+                          *ngIf="myform.controls['phoneNumber']?.errors?.['max']"
+                        >
+                          Phone number must 11 numbers!
+                        </p>
+                      </ng-container>
                 </div>
                 <div class="form-group d-flex m-3">
-                    <label class="w-25">email</label>
-                    <input formControlName="email" class="form-control" type="email">
+                    <label class="w-25">Email</label>
+                    <input formControlName="email" class="form-control" type="email" [(ngModel)]="Udata.email">
+
+                    <ng-container *ngIf="myform.controls['email'].touched">
+                        <p
+                          class="invalid-info"
+                          *ngIf="myform.controls['email']?.errors?.['required']"
+                        >
+                          Please type your email!
+                        </p>
+                      </ng-container>
+
+                      <ng-container *ngIf="myform.controls['email'].touched">
+                        <p
+                          class="invalid-info"
+                          *ngIf="myform.controls['email']?.errors?.['email']"
+                        >
+                          Please type your email in email formate!
+                        </p>
+                      </ng-container>
                 </div>
                 <div class="form-group d-flex m-3">
                     
-                    <input (click)="add()" class="btn btn-outline-success text-alinecenter" type="submit" value="add" >
+                    <input (click)="add()" class="btn btn-outline-success text-alinecenter" type="submit" value="submit changes" >
                 </div>
             </form>
 
