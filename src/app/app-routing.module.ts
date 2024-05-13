@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'movies', component: HomeComponent },
   { path: 'movie', component: MoviePageComponent },
-  {path: 'profile', component: ProfileEditComponent},
+  { path: 'profile', component: ProfileEditComponent },
   {
     path: 'seats',
     component: SeatsComponent,
@@ -27,7 +27,7 @@ const routes: Routes = [
   },
   { path: 'times/:id', component: MoveisTimesComponent },
   { path: 'log-in', component: LoginPageComponent },
-  { path : 'register', component: RegisterComponent },
+  { path: 'register', component: RegisterComponent },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
