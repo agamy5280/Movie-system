@@ -21,9 +21,9 @@ export class MoveisTimesComponent implements OnInit {
       next: (data) => (this.id = Number(data[data.length - 1].path)),
     });
   }
-  sendParams(time: any) {
+  sendParams(time: any, location:any) {
     this.router.navigate(['/seats'], {
-      queryParams: { time: time, id: this.id },
+      queryParams: { time: time, id: this.id, location:location },
     });
   }
 
