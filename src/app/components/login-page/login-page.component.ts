@@ -45,7 +45,12 @@ export class LoginPageComponent implements OnInit {
     
          console.log(user.email,user.password);
          this.server.login=true;
-         
+         const localuser= { firstName: user.firstName,
+         lastName: user.lastName,
+         email: user.email,
+         phoneNumber: user.phoneNumber,
+         }
+         localStorage.setItem('userData', JSON.stringify(localuser));
          this.router.navigate(['/']);       
       }
       
