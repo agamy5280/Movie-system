@@ -19,7 +19,7 @@ export class LoginPageComponent  {
 
   }
 
-    Log_in_Form = new FormGroup({
+  Log_in_Form = new FormGroup({
     email: new FormControl("",[Validators.required,Validators.email]),
     pass: new FormControl(null,[Validators.required,Validators.minLength(8)])
   })
@@ -27,25 +27,25 @@ export class LoginPageComponent  {
   logIn(){
     
     const ret=this.server.logIn(this.Log_in_Form.value.email,this.Log_in_Form.value.pass)
-    if (ret==1){
-      alert("inviled email")
+    console.log(ret);
+    
+    if (ret==2){
+      alert("invaild email")
 
-    }else if(ret==2){
-      alert("inviled password")
-
+    }else if(ret==1){
+      alert("invaild password");
     }else{
-         console.log(ret.email,ret.password);
-         this.server.login=true;
+         
          var localuser= ret
          if (localuser.hasOwnProperty('password')) {
           delete localuser['password'];
         }
           
-         localStorage.setItem('userData', JSON.stringify(localuser));
-         alert("Login Successful!")
-         this.router.navigate(['/']);       
-
-
+         this.server.setUser(localuser);
+         alert("Login Successful!");
+         this.router.navigate(['/']).
+         then(() => {
+          window.location.reload()});
 
     }
 
