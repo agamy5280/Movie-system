@@ -10,10 +10,11 @@ import { AuthGuard } from './guard/auth-guard.guard';
 import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
 import { RegisterComponent } from './components/register/register.component';
 const routes: Routes = [
+  { path: 'log-in', component: LoginPageComponent },
   { path: '', component: HomeComponent },
-  { path: 'movies', component: HomeComponent },
+  { path: 'movies', component: HomeComponent, },
   { path: 'movie', component: MoviePageComponent },
-  { path: 'profile', component: ProfileEditComponent },
+  { path: 'profile/:id', component: ProfileEditComponent },
   {
     path: 'seats',
     component: SeatsComponent,
@@ -26,7 +27,6 @@ const routes: Routes = [
     ],
   },
   { path: 'times/:id', component: MoveisTimesComponent },
-  { path: 'log-in', component: LoginPageComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
