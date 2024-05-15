@@ -6,8 +6,18 @@ import { Observable, map } from 'rxjs';
   providedIn: 'root'
 })
 export class UsersService {
+  USERS:any 
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) { 
+    this.getAllUsers().subscribe({
+      next:(data)=>{this.USERS=data;
+      },
+      error:(err)=>{console.log("error");
+      },
+  
+     }
+   );
+  }
   private DB_U_url="http://localhost:3000/users"
   login=false;
   getAllUsers(){
@@ -31,9 +41,23 @@ export class UsersService {
   updateObjectById(id: number, updatedObject: any): Observable<any> {
     return this.http.put<any>(`${this.DB_U_url}/${id}`, updatedObject);
   }
+ logIn(email:any,pass:any){
+   
+ for( const user of this.USERS){
+  if (user.email==email){
+    if(user.password==pass){
+      return user
 
+    }else{
+      return 1
+    }
 
+  }else{
+    return 2
+  }
 
+ }
 
+  }
 
 }

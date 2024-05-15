@@ -6,7 +6,8 @@
       "lastName": "hamda",
       "email": "sadadsaa@hotmail.com",
       "phoneNumber": "000000",
-      "password": "0000000"
+      "password": "00000000",
+      "movies":[{},{}]
     },
     {
       "id": "2",
@@ -22,7 +23,7 @@
       "lastName": "ahmed",
       "email": "mahmed@hotmail.com",
       "phoneNumber": "000000",
-      "password": "654654"
+      "password": "65411654"
     },
     {
       "FirstName": "kimo1",
