@@ -51,8 +51,8 @@ export class UsersService {
   getUsersByid(id:number){
     return this.http.get(this.DB_U_url+"/"+id)
   }
-  registerUser(userDetails: User){
-    return this.http.post(`${this.DB_U_url}/users`,userDetails);
+  registerUser(userDetails: any){
+    return this.http.post(`${this.DB_U_url}`,userDetails);
   }
 
   
@@ -87,5 +87,4 @@ export class UsersService {
     }
   }
 }
-  
 }

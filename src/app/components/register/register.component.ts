@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UsersService } from '../../services/users.service';
-import { User } from '../../../interfaces/auth';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -9,7 +9,7 @@ import { User } from '../../../interfaces/auth';
 
 })
 export class RegisterComponent {
-  constructor(private authService : UsersService) { }
+  constructor(private userSerivce : UsersService, private _router: Router) { }
 
   registerForm = new FormGroup({
     firstName: new FormControl('', [
@@ -23,7 +23,11 @@ export class RegisterComponent {
       Validators.pattern('[A-Za-z]+'),
     ]),
     phoneNumber: new FormControl('', [
-      Validators.required
+      Validators.required,
+      Validators.pattern(/^01/),
+      Validators.minLength(10),
+      Validators.maxLength(20),
+      Validators.pattern('[0-9]+'),
     ]),
     password: new FormControl('', [
       Validators.required,
@@ -41,6 +45,11 @@ export class RegisterComponent {
 
       
     //)
+    console.log(this.registerForm.value)
+    this.userSerivce.registerUser(this.registerForm.value).subscribe(()=> {
+      alert('Register Completed!');
+      this._router.navigate(['/log-in']);
+    })
   }
    
 }

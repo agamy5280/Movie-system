@@ -47,34 +47,6 @@
               >
             </li>
           </ul>
-<<<<<<< HEAD
-          @if(!userService.login){
-            <ul class="navbar-nav ms-auto trans">
-              <li class="nav-item trans">
-                <a class="nav-link trans item-hover active fw-bold text-uppercase" routerLink="/log-in">Login</a>
-              </li>
-              <li class="nav-item trans">
-                <a class="nav-link trans item-hover active fw-bold text-uppercase" routerLink="/register">Sign-up</a>
-              </li>
-            </ul>
-          }@else {
-            <ul class="navbar-nav trans ms-auto trans">
-              <li class="nav-item dropdown trans">
-                <a class="nav-link dropdown-toggle trans item-hover text-uppercase fw-bold active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  My Account
-                </a>
-                <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Profile</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Last Reservations</a></li>
-                </ul>
-              </li>
-            </ul>
-          }
-        </div>
-      </div>
-    </nav>
-=======
         </li>
       </ul>
       @if(currentUser == null){
@@ -130,4 +102,3 @@
     </div>
   </div>
 </nav>
->>>>>>> 95ef46c6a4524b3975767f659bf5d2eb374edb69
