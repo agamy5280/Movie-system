@@ -1,11 +1,16 @@
-<h2 class="title-header">{{ Mdata.title }}</h2>
+<div class="now-showing">
 
-<div class="movie-container">
-  <div>
-    <img src="../../../assets/images/{{ Mdata.movie_image }}" />
+  <div class="row">
+
+    <h2 class="title-header">{{ Mdata.title }}</h2>
   </div>
-  <div>
-    <iframe
+  
+  <div class="movie-container">
+    <div>
+      <img src="../../../assets/images/{{ Mdata.movie_image }}" />
+    </div>
+    <div>
+      <iframe
       width="560"
       height="500"
       [src]="getSafeUrl(movieTrailerCode)"
@@ -14,24 +19,25 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen
-    ></iframe>
+      ></iframe>
+    </div>
   </div>
-</div>
-<hr class="dashed" />
-<div class="movie-details">
-  <div>
-    <h5>{{ Mdata.title }}</h5>
-    <p>Genre : {{ Mdata.Genre }}</p>
-    <p>Cast : {{ Mdata.Starring }}</p>
-    <p>Language : {{ Mdata.Language }}</p>
-    <p>Classification : {{ Mdata.classification }}</p>
-    <p>Subtitle(s) : {{ Mdata.Subtitle }}</p>
-    <p>Rating : {{ Mdata.rating }}</p>
+  <hr class="dashed" />
+  <div class="movie-details">
+    <div>
+      <p>Genre: <span>{{ Mdata.Genre }}</span></p>
+      <p>Cast: <span>{{ Mdata.Starring }}</span></p>
+      <p>Language: <span>{{ Mdata.Language }}</span></p>
+      <p>Classification: <span>{{ Mdata.classification }}</span></p>
+      <p>Subtitle(s): <span>{{ Mdata.Subtitle }}</span></p>
+      <p>Rating: <span>{{ Mdata.rating }}</span></p>
   </div>
   <div class="desc">
     <p>{{ Mdata.description }}</p>
   </div>
 </div>
-<div class="btn-book">
-  <input (click)="sendParams()" type="submit" value="Book" />
+<div>
+  <input class="btn" (click)="sendParams()" type="submit" value="View Showtimes" />
+</div>
+
 </div>
