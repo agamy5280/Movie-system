@@ -32,6 +32,22 @@
       "phoneNumber": 1055448899,
       "email": "madamido@yahoo.com",
       "id": "4"
+    },
+    {
+      "id": "8930",
+      "firstName": "Mohamed",
+      "lastName": "Alaa",
+      "phoneNumber": "01223715457",
+      "password": "123456789",
+      "email": "alaam7370@gmail.com"
+    },
+    {
+      "id": "d393",
+      "firstName": "Mohamed",
+      "lastName": "Alaa",
+      "phoneNumber": "01098272398",
+      "password": "123456789",
+      "email": "alaam7370@gmail.com"
     }
   ],
   "movies": [
@@ -273,7 +289,6 @@
       "reviews": [],
       "seats": "",
       "show_times": [
-        
         {
           "loaction": "Mall Of Egypt",
           "times": [
@@ -281,7 +296,6 @@
             "4:45pm"
           ]
         }
-       
       ]
     },
     {
