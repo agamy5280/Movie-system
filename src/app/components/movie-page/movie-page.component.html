@@ -1,28 +1,37 @@
-<h2 class="title-header">{{Mdata.title}}</h2>
+<h2 class="title-header">{{ Mdata.title }}</h2>
 
-<div class="ImgVidContainer">
-    <div class="imgContainer" >
-        <img src="../../../assets/images/{{Mdata.movie_image}}" style="height: 330px;">
-    </div>
-    <div >
-        <iframe width="560" height="315" [src]="getSafeUrl(movieTrailerCode)" title="Kingdom of the Planet of the Apes | Exclusive IMAX® Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <!-- src="https://www.youtube.com/embed/er3h_STlp-k" -->
-    </div>
+<div class="movie-container">
+  <div>
+    <img src="../../../assets/images/{{ Mdata.movie_image }}" />
+  </div>
+  <div>
+    <iframe
+      width="560"
+      height="500"
+      [src]="getSafeUrl(movieTrailerCode)"
+      title="Kingdom of the Planet of the Apes | Exclusive IMAX® Trailer"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
 </div>
-
-<div style="display: flex; flex-direction: column;">
-
-    <div style="width: 800px; margin-top: 80px; margin-left: 300px;">
-        <h5>{{Mdata.title}}</h5>
-        <p>Type : {{Mdata.Genre}}</p>
-        <p>Description : {{Mdata.description}}</p>
-        <p>Cast : {{Mdata.Starring}}</p>
-        <p>Language : {{Mdata.Language}}</p>
-        <p>classification : {{Mdata.classification}}</p>
-        <p>Subtitle(s) : {{Mdata.Subtitle}}</p>
-        <p>Rating : {{Mdata.rating}}</p>
-    
-    </div>
-    <input (click)="sendParams()" class="btn btn-outline-success text-alinecenter" style="width: max-content; margin: auto;"  type="submit" value="book a ticket" >
-
+<hr class="dashed" />
+<div class="movie-details">
+  <div>
+    <h5>{{ Mdata.title }}</h5>
+    <p>Genre : {{ Mdata.Genre }}</p>
+    <p>Cast : {{ Mdata.Starring }}</p>
+    <p>Language : {{ Mdata.Language }}</p>
+    <p>Classification : {{ Mdata.classification }}</p>
+    <p>Subtitle(s) : {{ Mdata.Subtitle }}</p>
+    <p>Rating : {{ Mdata.rating }}</p>
+  </div>
+  <div class="desc">
+    <p>{{ Mdata.description }}</p>
+  </div>
+</div>
+<div class="btn-book">
+  <input (click)="sendParams()" type="submit" value="Book" />
 </div>

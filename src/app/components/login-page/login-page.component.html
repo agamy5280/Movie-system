@@ -1,16 +1,38 @@
-<a class="navbar-brand" routerLink="/"><img class="logo" src="assets/images/logo-dark.png"></a>
 
-<div class="container" style="width: 800px; margin-top: 80px; margin-left: 300px;">
-    <h4>sign into your account </h4>
+<div class="container text-center w-50" style="width: 800px; margin-top: 60px; ">
+    <a class="navbar-brand p "    routerLink="/"><img style=" margin-bottom: 50px;" class="logo" src="assets/images/logo-dark.png" ></a>
+
+    <h4 style=" margin-bottom: 10px; ">Sign into your account </h4>
     <div class="row">
         <div class="col" >
-            <form [formGroup]="myForm" class="form">
+            <div [formGroup]="Log_in_Form" class="form">
+
+
                 <div class="form-group d-flex m-3">
                     <input formControlName="email" class="form-control" type="text">
 
                 </div>
 
 
+                <ng-container *ngIf="Log_in_Form.controls['email'].touched">
+                    <p
+                      class="invalid-info"
+                      *ngIf="Log_in_Form.controls['email']?.errors?.['required']"
+                    >
+                      Please type your Email!
+                    </p>
+                  </ng-container>
+                  <ng-container *ngIf="Log_in_Form.controls['email'].touched">
+                    <p
+                      class="invalid-info"
+                      *ngIf="Log_in_Form.controls['email']?.errors?.['email']"
+                    >
+                      The Email Must Be In Email Form!
+                    </p>
+                  </ng-container>
+                 
+             
+             
 
 
 
@@ -34,16 +56,34 @@
                     </button>
                    
                 </div>
+
+                <ng-container *ngIf="Log_in_Form.controls['pass'].touched">
+                    <p
+                      class="invalid-info"
+                      *ngIf="Log_in_Form.controls['pass']?.errors?.['required']"
+                    >
+                      Please type your password!
+                    </p>
+                  </ng-container>
+
+                  <ng-container *ngIf="Log_in_Form.controls['pass'].touched">
+                    <p
+                      class="invalid-info"
+                      *ngIf="Log_in_Form.controls['pass']?.errors?.['minLength']"
+                    >
+                      Password must be minimum 8 charcters  !
+                    </p>
+                  </ng-container>
             
  
                 <div class="text-center m-3">
-                    <input (click)="Add()" class="btn btn-outline-success" type="submit" value="log-in">
+                    <input (click)="logIn()" class="btn btn-outline-success" type="submit" value="Log-In" [disabled]="!Log_in_Form.valid">
                 </div>
-
-            </form>
-           <p style="display: flex;">dont have an acount? </p> 
-           <a routerLinkActive="active" routerLink="/register" class="nav-link" style="display: flex;">Sign Up</a>
-
+                <p >don`t have an acount? </p> 
+                <a routerLinkActive="active" routerLink="/register" class="nav-link">Sign Up</a>
+     
+            </div>
+        
         </div>
     </div>
 </div>
