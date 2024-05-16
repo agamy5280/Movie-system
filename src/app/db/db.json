@@ -48,6 +48,13 @@
       "phoneNumber": "01098272398",
       "password": "123456789",
       "email": "alaam7370@gmail.com"
+    },
+    {
+      "firstName": "Mahmoud",
+      "lastName": "Ali",
+      "phoneNumber": "01122342342432",
+      "email": "mahmoud@example.com",
+      "id": "19e4"
     }
   ],
   "movies": [
