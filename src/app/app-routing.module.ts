@@ -10,6 +10,7 @@ import { AuthGuard } from './guard/auth-guard.guard';
 import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ConfirmComponent } from './components/confirm/confirm.component';
+import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 const routes: Routes = [
   { path: 'log-in', component: LoginPageComponent },
   { path: '', component: HomeComponent },
@@ -26,14 +27,15 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       {
-        path: ':time/:id',
+        path: ':times',
         component: SeatsComponent,
       },
     ],
   },
-  { path: 'times/:id', component: MoveisTimesComponent },
+  { path: 'times', component: MoveisTimesComponent },
   { path: 'log-in', component: LoginPageComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'soon', component: ComingSoonComponent },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
