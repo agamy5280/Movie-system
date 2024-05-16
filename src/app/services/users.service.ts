@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, map } from 'rxjs';
+import { Observable, map, BehaviorSubject } from 'rxjs';
 import { User } from '../model/User';
 
 @Injectable({
@@ -51,6 +51,9 @@ export class UsersService {
   getUsersByid(id:number){
     return this.http.get(this.DB_U_url+"/"+id)
   }
+  registerUser(userDetails: any){
+    return this.http.post(`${this.DB_U_url}`,userDetails);
+  }
 
   
   // return whole user object based on ID
@@ -84,5 +87,4 @@ export class UsersService {
     }
   }
 }
-  
 }
