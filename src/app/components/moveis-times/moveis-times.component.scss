@@ -120,3 +120,8 @@ h3.weekday::before{
     margin-left: auto;
     margin-right: auto;
 }
+
+.dashed{
+    width: 60%;
+    border-bottom: 1px dashed #515254;
+}
