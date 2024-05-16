@@ -6,27 +6,29 @@
       "lastName": "hamda",
       "email": "sadadsaa@hotmail.com",
       "phoneNumber": "000000",
-      "password": "0000000"
+      "password": "00000000",
+      "movies": [
+        {},
+        {}
+      ]
     },
     {
-      "id": "2",
       "firstName": "ali",
       "lastName": "ahmed",
+      "phoneNumber": 10000000000,
       "email": "alii@hotmail.com",
-      "phoneNumber": "000000",
-      "password": "123456789"
+      "id": "2"
     },
     {
-      "id": "3",
-      "firstName": "mahmoud",
-      "lastName": "ahmed",
-      "email": "mahmed@hotmail.com",
-      "phoneNumber": "000000",
-      "password": "654654"
+      "firstName": "Marwan",
+      "lastName": "ElAgamy",
+      "phoneNumber": "01223715457",
+      "email": "marawan.agamy2010@hotmail.com",
+      "id": "3"
     },
     {
-      "FirstName": "kimo1",
-      "LastName": "mido",
+      "firstName": "kimo1",
+      "lastName": "mido",
       "phoneNumber": 1055448899,
       "email": "madamido@yahoo.com",
       "id": "4"
@@ -54,13 +56,6 @@
         }
       ],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
-      ],
       "show_times": [
         {
           "loaction": "City Center Almaza",
@@ -104,12 +99,24 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -128,12 +135,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -152,12 +186,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -176,12 +237,23 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -200,12 +272,16 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        }
+       
       ]
     },
     {
@@ -224,12 +300,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -248,12 +351,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -272,12 +402,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -296,12 +453,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -320,12 +504,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     },
     {
@@ -344,12 +555,39 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
+      "show_times": [
+        {
+          "loaction": "City Starts",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        },
+        {
+          "loaction": "City Center Almaza",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm",
+            "11:45pm"
+          ]
+        },
+        {
+          "loaction": "Mall Of Egypt",
+          "times": [
+            "1:45pm",
+            "4:45pm"
+          ]
+        },
+        {
+          "loaction": "City Center Alexandria",
+          "times": [
+            "1:45pm",
+            "4:45pm",
+            "8:30pm"
+          ]
+        }
       ]
     }
   ]

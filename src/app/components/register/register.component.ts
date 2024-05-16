@@ -22,6 +22,9 @@ export class RegisterComponent {
       Validators.minLength(3),
       Validators.pattern('[A-Za-z]+'),
     ]),
+    phoneNumber: new FormControl('', [
+      Validators.required
+    ]),
     password: new FormControl('', [
       Validators.required,
       Validators.minLength(8)
@@ -31,13 +34,13 @@ export class RegisterComponent {
 
   submitDetails(){
     //console.log(this.registerForm.value);
-    const postData = {...this.registerForm.value};
-    this.authService.registerUser(postData as User).subscribe(
-      response => console.log(response),
-      error => console.log(error)
+    //const postData = {...this.registerForm.value};
+    //this.authService.registerUser(postData as User).subscribe(
+      //response => console.log(response),
+     // error => console.log(error)
+
       
-      
-    )
+    //)
   }
    
 }

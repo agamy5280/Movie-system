@@ -1,139 +1,156 @@
-<div style="margin: 40px; text-align: center;">
-    <h2>Edit Profile</h2>
-</div>
-
-
-
-
-<div class="container">
-    <div class="row">
-        <div class="colomn">
-            <form [formGroup]="myform" class="form">
-                <div class="form-group d-flex m-3">
-                    <label class="w-25">First Name</label>
-                    <input formControlName="FirstName" class="form-control" type="text" [(ngModel)]="Udata.FirstName">
-
-                    <ng-container *ngIf="myform.controls['FirstName'].touched">
-                        <p
-                          class="invalid-info"
-                          *ngIf="myform.controls['FirstName']?.errors?.['required']"
-                        >
-                          Please type your First Name!
-                        </p>
-                      </ng-container>
-                      <ng-container *ngIf="myform.controls['FirstName'].touched">
-                        <p
-                          class="invalid-info"
-                          *ngIf="myform.controls['FirstName']?.errors?.['pattern']"
-                        >
-                        First Name must not contains numbers!
-                        </p>
-                      </ng-container>
-                      <ng-container *ngIf="myform.controls['FirstName'].touched">
-                        <p
-                          class="invalid-info"
-                          *ngIf="myform.controls['FirstName']?.errors?.['minLength']"
-                        >
-                        First Name must be at least 3 letters!
-                        </p>
-                      </ng-container>
-                </div>
-                <div class="form-group d-flex m-3">
-                    <label class="w-25">Last Name</label>
-                    <input formControlName="LastName" class="form-control" type="text" [(ngModel)]="Udata.LastName">
-                    <ng-container *ngIf="myform.controls['LastName'].touched">
-                        <p
-                          class="invalid-info"
-                          *ngIf="myform.controls['LastName']?.errors?.['required']"
-                        >
-                          Please type your Last Name!
-                        </p>
-                      </ng-container>
-                      <ng-container *ngIf="myform.controls['LastName'].touched">
-                        <p
-                          class="invalid-info"
-                          *ngIf="myform.controls['LastName']?.errors?.['pattern']"
-                        >
-                          Last Name must not contains numbers!
-                        </p>
-                      </ng-container>
-                      <ng-container *ngIf="myform.controls['LastName'].touched">
-                        <p
-                          class="invalid-info"
-                          *ngIf="myform.controls['LastName']?.errors?.['minLength']"
-                        >
-                          Last Name must be at least 3 letters!
-                        </p>
-                      </ng-container>
-                </div>
-                <div class="form-group d-flex m-3">
-                    <label class="w-25">Phone Number</label>
-                    <input formControlName="phoneNumber" class="form-control" type="number"[(ngModel)]="Udata.phoneNumber">
-
-                    <ng-container *ngIf="myform.controls['phoneNumber'].touched">
-                        <p
-                          class="invalid-info"
-                          *ngIf="myform.controls['phoneNumber']?.errors?.['required']"
-                        >
-                          Please type your phone number!
-                        </p>
-                      </ng-container>
-                      <ng-container *ngIf="myform.controls['phoneNumber'].touched">
-                        <p
-                          class="invalid-info"
-                          *ngIf="myform.controls['phoneNumber']?.errors?.['pattern']"
-                        >
-                          Phone number must be digits!
-                        </p>
-                      </ng-container>
-
-                      <ng-container *ngIf="myform.controls['phoneNumber'].touched">
-                        <p
-                          class="invalid-info"
-                          *ngIf="myform.controls['phoneNumber']?.errors?.['min']"
-                        >
-                          Phone number must start with 01!
-                        </p>
-                      </ng-container>
-
-                      <ng-container *ngIf="myform.controls['phoneNumber'].touched">
-                        <p
-                          class="invalid-info"
-                          *ngIf="myform.controls['phoneNumber']?.errors?.['max']"
-                        >
-                          Phone number must 11 numbers!
-                        </p>
-                      </ng-container>
-                </div>
-                <div class="form-group d-flex m-3">
-                    <label class="w-25">Email</label>
-                    <input formControlName="email" class="form-control" type="email" [(ngModel)]="Udata.email">
-
-                    <ng-container *ngIf="myform.controls['email'].touched">
-                        <p
-                          class="invalid-info"
-                          *ngIf="myform.controls['email']?.errors?.['required']"
-                        >
-                          Please type your email!
-                        </p>
-                      </ng-container>
-
-                      <ng-container *ngIf="myform.controls['email'].touched">
-                        <p
-                          class="invalid-info"
-                          *ngIf="myform.controls['email']?.errors?.['email']"
-                        >
-                          Please type your email in email formate!
-                        </p>
-                      </ng-container>
-                </div>
-                <div class="form-group d-flex m-3">
-                    
-                    <input (click)="add()" class="btn btn-outline-success text-alinecenter" type="submit" value="submit changes" >
-                </div>
-            </form>
-
+<form [formGroup]="editProfileForm" id="registerForm" (ngSubmit)="editProfle()">
+  <div>
+    <div>
+      <div>
+        <div id="mySpan">
+          <h5>
+            <img class="icon" src="../../../assets/images/user.png" />
+            <span>Account Profile</span>
+          </h5>
         </div>
+        <div>
+          <div>
+            <div>
+              <label>First Name</label>
+              <input
+                type="text"
+                placeholder="John"
+                [(ngModel)]="Udata.firstName"
+                formControlName="firstName"
+              />
+            </div>
+            <div>
+              <label>Last Name</label>
+              <input
+                type="text"
+                placeholder="Doe"
+                [(ngModel)]="Udata.lastName"
+                formControlName="lastName"
+              />
+            </div>
+            <div>
+              <label>Phone Number</label>
+              <input
+                type="text"
+                placeholder="+123 456 789"
+                [(ngModel)]="Udata.phoneNumber"
+                formControlName="phoneNumber"
+              />
+            </div>
+            <div>
+              <label>Email</label>
+              <input
+                type="text"
+                placeholder="John@hotmail.com"
+                [(ngModel)]="Udata.email"
+                formControlName="email"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-container *ngIf="editProfileForm.controls['firstName'].touched">
+        <p
+          class="text-danger"
+          *ngIf="editProfileForm.controls['firstName']?.errors?.['pattern']"
+        >
+          First Name must not contains numbers!
+        </p>
+      </ng-container>
+      <ng-container *ngIf="editProfileForm.controls['firstName'].touched">
+        <p
+          class="text-danger"
+          *ngIf="editProfileForm.controls['firstName']?.errors?.['minlength']"
+        >
+          First Name must be minimum 3 charcters !
+        </p>
+      </ng-container>
+      <ng-container *ngIf="editProfileForm.controls['firstName'].touched">
+        <p
+          class="text-danger"
+          *ngIf="editProfileForm.controls['firstName']?.errors?.['required']"
+        >
+          Please type your First Name!
+        </p>
+      </ng-container>
+      <ng-container *ngIf="editProfileForm.controls['lastName'].touched">
+        <p
+          class="text-danger"
+          *ngIf="editProfileForm.controls['lastName']?.errors?.['pattern']"
+        >
+          Last Name must not contains numbers!
+        </p>
+      </ng-container>
+      <ng-container *ngIf="editProfileForm.controls['lastName'].touched">
+        <p
+          class="text-danger"
+          *ngIf="editProfileForm.controls['lastName']?.errors?.['minlength']"
+        >
+          Last Name must be minimum 3 charcters !
+        </p>
+      </ng-container>
+      <ng-container *ngIf="editProfileForm.controls['lastName'].touched">
+        <p
+          class="text-danger"
+          *ngIf="editProfileForm.controls['lastName']?.errors?.['required']"
+        >
+          Please type your Last Name!
+        </p>
+      </ng-container>
+      <ng-container *ngIf="editProfileForm.controls['phoneNumber'].touched">
+        <p
+          class="text-danger"
+          *ngIf="editProfileForm.controls['phoneNumber']?.errors?.['minlength']"
+        >
+          Mobile number Must be at least 10 numbers!
+        </p>
+      </ng-container>
+      <ng-container *ngIf="editProfileForm.controls['phoneNumber'].touched">
+        <p
+          class="text-danger"
+          *ngIf="editProfileForm.controls['phoneNumber']?.errors?.['maxlength']"
+        >
+          Mobile number Must be at most 20 numbers!
+        </p>
+      </ng-container>
+      <ng-container *ngIf="editProfileForm.controls['phoneNumber'].touched">
+        <p
+          class="text-danger"
+          *ngIf="editProfileForm.controls['phoneNumber']?.errors?.['pattern']"
+        >
+          Mobile number must start with '01' and Does not contains characters.
+        </p>
+      </ng-container>
+      <ng-container *ngIf="editProfileForm.controls['phoneNumber'].touched">
+        <p
+          class="text-danger"
+          *ngIf="editProfileForm.controls['phoneNumber']?.errors?.['required']"
+        >
+          Please Type your phone number!
+        </p>
+      </ng-container>
+      <ng-container *ngIf="editProfileForm.controls['email'].touched">
+        <p
+          class="text-danger"
+          *ngIf="editProfileForm.controls['email']?.errors?.['email']"
+        >
+          Please type a valid email address!.
+        </p>
+      </ng-container>
+      <ng-container *ngIf="editProfileForm.controls['email'].touched">
+        <p
+          class="text-danger"
+          *ngIf="editProfileForm.controls['email']?.errors?.['required']"
+        >
+          Please Type your email address!
+        </p>
+      </ng-container>
+      <input
+        type="submit"
+        class="btn btn-block btn-primary font-weight-bold py-3"
+        value="Edit Profle"
+        [disabled]="!editProfileForm.valid"
+      />
     </div>
-
-</div>
+  </div>
+</form>
