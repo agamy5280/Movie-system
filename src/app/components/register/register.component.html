@@ -87,7 +87,31 @@
                     class="text-danger" 
                     *ngIf="registerForm.controls['phoneNumber']?.errors?.['required']"  
               >
-                Please Enter the phone Number!
+                Please Enter the Phone Number!
+              </p>
+            </ng-container>
+            <ng-container *ngIf="registerForm.controls['phoneNumber'].touched">
+              <p
+                    class="text-danger" 
+                    *ngIf="registerForm.controls['phoneNumber']?.errors?.['minlength']"  
+              >
+              Enter minimum 10 numbers.
+              </p>
+            </ng-container>
+            <ng-container *ngIf="registerForm.controls['phoneNumber'].touched">
+              <p
+                    class="text-danger" 
+                    *ngIf="registerForm.controls['phoneNumber']?.errors?.['pattern']"  
+              >
+              Phone number must start with '01' and Does not contains numbers. 
+              </p>
+            </ng-container>
+            <ng-container *ngIf="registerForm.controls['phoneNumber'].touched">
+              <p
+                    class="text-danger" 
+                    *ngIf="registerForm.controls['phoneNumber']?.errors?.['maxlength']"  
+              >
+              Mobile number must not exceed 20 numbers. 
               </p>
             </ng-container>
             
