@@ -16,6 +16,7 @@ export class SeatsComponent implements OnInit {
   movieImg: any;
   movieTime: any;
   movieData: any;
+  movieLocation: any;
   constructor(
     private route: ActivatedRoute,
     private _router: Router,
@@ -33,6 +34,7 @@ export class SeatsComponent implements OnInit {
     this.route.queryParams.subscribe(async (params) => {
       this.movieID = params['id'];
       this.movieTime = params['time'];
+      this.movieLocation = params['location'];
       (await this.movieService.getMovieByID(this.movieID)).subscribe({
         next: (data) => {
           this.movieData = data;
@@ -73,8 +75,15 @@ export class SeatsComponent implements OnInit {
       }
     }
   }
-  showSelectedSeats() {
-    console.log(this.selectedSeats);
+  confirmReservation() {
+    this._router.navigate(['/confirm'], {
+      queryParams: {
+        id: this.movieID,
+        time: this.movieTime,
+        location: this.movieLocation,
+        seats: this.selectedSeats,
+      },
+    });
   }
   calculateTicketPrice() {
     const selectedCount = this.selectedSeats.length;

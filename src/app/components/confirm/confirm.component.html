@@ -1,13 +1,15 @@
 <div class="pop-up" *ngIf="showPopUp">
-    <div class="pop-up-content">
-      <p *ngIf="message">{{ message }}</p>
-      <p *ngIf="user">
-        <strong>User Data:</strong>
-        <ul>
-          <li *ngIf="user?.firstName">{{ user?.firstName }}</li>
-          <li *ngIf="user?.email">{{ user?.email }}</li>
-        </ul>
-      
-      <button class="close-btn" (click)="onClose()">Close</button>
-    </div>
+  <div class="pop-up-content">
+    <p *ngIf="message">{{ message }}</p>
+    <p *ngIf="user">
+      <strong>User Data:</strong>
+    </p>
+
+    <ul>
+      <li *ngIf="user?.firstName">{{ user?.firstName }}</li>
+      <li *ngIf="user?.email">{{ user?.email }}</li>
+    </ul>
+
+    <button class="close-btn" (click)="onClose()">Close</button>
   </div>
+</div>

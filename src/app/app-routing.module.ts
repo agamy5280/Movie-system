@@ -36,6 +36,7 @@ const routes: Routes = [
   { path: 'log-in', component: LoginPageComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'soon', component: ComingSoonComponent },
+  { path: 'confirm', component: ConfirmComponent },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
