@@ -43,17 +43,19 @@ export class UsersService {
   }
  logIn(email:any,pass:any){
    
- for( const user of this.USERS){
+ for( let i = 0; i < this.USERS.length; i++){
+  const user = this.USERS[i];
   if (user.email==email){
     if(user.password==pass){
       return user
 
     }else{
-      return 1
+      
+      return 2
     }
 
-  }else{
-    return 2
+  }else  if (i === this.USERS.length - 1) {
+    return 1
   }
 
  }
