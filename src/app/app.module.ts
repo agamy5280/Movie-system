@@ -13,6 +13,8 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
+import { ConfirmComponent } from './components/confirm/confirm.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -25,9 +27,8 @@ import { ComingSoonComponent } from './components/coming-soon/coming-soon.compon
     LoginPageComponent,
     ProfileEditComponent,
     RegisterComponent,
-    ComingSoonComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule,MatSnackBarModule],
   providers: [],
   bootstrap: [AppComponent],
 })
