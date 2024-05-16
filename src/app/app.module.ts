@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { RegisterComponent } from './components/register/register.component';
     LoginPageComponent,
     ProfileEditComponent,
     RegisterComponent,
+    ComingSoonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],

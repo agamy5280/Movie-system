@@ -9,6 +9,7 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { AuthGuard } from './guard/auth-guard.guard';
 import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'movies', component: HomeComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'times', component: MoveisTimesComponent },
   { path: 'log-in', component: LoginPageComponent },
   { path: 'register', component: RegisterComponent },
+  {path: 'soon', component: ComingSoonComponent},
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
