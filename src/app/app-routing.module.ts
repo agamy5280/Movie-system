@@ -13,9 +13,13 @@ import { ConfirmComponent } from './components/confirm/confirm.component';
 const routes: Routes = [
   { path: 'log-in', component: LoginPageComponent },
   { path: '', component: HomeComponent },
-  { path: 'movies', component: HomeComponent, },
+  { path: 'movies', component: HomeComponent },
   { path: 'movie', component: MoviePageComponent },
-  { path: 'profile/:id', component: ProfileEditComponent },
+  {
+    path: 'profile',
+    component: ProfileEditComponent,
+    canActivate: [AuthGuard],
+  },
   {
     path: 'seats',
     component: SeatsComponent,

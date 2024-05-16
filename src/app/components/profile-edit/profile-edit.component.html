@@ -9,32 +9,32 @@
         <div class="form-group d-flex m-3">
           <label class="w-25">First Name</label>
           <input
-            formControlName="FirstName"
+            formControlName="firstName"
             class="form-control"
             type="text"
-            [(ngModel)]="Udata.FirstName"
+            [(ngModel)]="Udata.firstName"
           />
 
-          <ng-container *ngIf="myform.controls['FirstName'].touched">
+          <ng-container *ngIf="myform.controls['firstName'].touched">
             <p
               class="invalid-info"
-              *ngIf="myform.controls['FirstName']?.errors?.['required']"
+              *ngIf="myform.controls['firstName']?.errors?.['required']"
             >
               Please type your First Name!
             </p>
           </ng-container>
-          <ng-container *ngIf="myform.controls['FirstName'].touched">
+          <ng-container *ngIf="myform.controls['firstName'].touched">
             <p
               class="invalid-info"
-              *ngIf="myform.controls['FirstName']?.errors?.['pattern']"
+              *ngIf="myform.controls['firstName']?.errors?.['pattern']"
             >
               First Name must not contains numbers!
             </p>
           </ng-container>
-          <ng-container *ngIf="myform.controls['FirstName'].touched">
+          <ng-container *ngIf="myform.controls['firstName'].touched">
             <p
               class="invalid-info"
-              *ngIf="myform.controls['FirstName']?.errors?.['minLength']"
+              *ngIf="myform.controls['firstName']?.errors?.['minLength']"
             >
               First Name must be at least 3 letters!
             </p>
@@ -43,31 +43,31 @@
         <div class="form-group d-flex m-3">
           <label class="w-25">Last Name</label>
           <input
-            formControlName="LastName"
+            formControlName="lastName"
             class="form-control"
             type="text"
-            [(ngModel)]="Udata.LastName"
+            [(ngModel)]="Udata.lastName"
           />
-          <ng-container *ngIf="myform.controls['LastName'].touched">
+          <ng-container *ngIf="myform.controls['lastName'].touched">
             <p
               class="invalid-info"
-              *ngIf="myform.controls['LastName']?.errors?.['required']"
+              *ngIf="myform.controls['lastName']?.errors?.['required']"
             >
               Please type your Last Name!
             </p>
           </ng-container>
-          <ng-container *ngIf="myform.controls['LastName'].touched">
+          <ng-container *ngIf="myform.controls['lastName'].touched">
             <p
               class="invalid-info"
-              *ngIf="myform.controls['LastName']?.errors?.['pattern']"
+              *ngIf="myform.controls['lastName']?.errors?.['pattern']"
             >
               Last Name must not contains numbers!
             </p>
           </ng-container>
-          <ng-container *ngIf="myform.controls['LastName'].touched">
+          <ng-container *ngIf="myform.controls['lastName'].touched">
             <p
               class="invalid-info"
-              *ngIf="myform.controls['LastName']?.errors?.['minLength']"
+              *ngIf="myform.controls['lastName']?.errors?.['minLength']"
             >
               Last Name must be at least 3 letters!
             </p>

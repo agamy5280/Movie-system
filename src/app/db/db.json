@@ -7,15 +7,14 @@
       "email": "sadadsaa@hotmail.com",
       "phoneNumber": "000000",
       "password": "00000000",
-      "movies":[{},{}]
+      "movies": [{}, {}]
     },
     {
-      "id": "2",
       "firstName": "ali",
       "lastName": "ahmed",
+      "phoneNumber": 10000000000,
       "email": "alii@hotmail.com",
-      "phoneNumber": "000000",
-      "password": "123456789"
+      "id": "2"
     },
     {
       "id": "3",
@@ -26,8 +25,8 @@
       "password": "65411654"
     },
     {
-      "FirstName": "kimo1",
-      "LastName": "mido",
+      "firstName": "kimo1",
+      "lastName": "mido",
       "phoneNumber": 1055448899,
       "email": "madamido@yahoo.com",
       "id": "4"
@@ -55,37 +54,19 @@
         }
       ],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
-      ],
+      "movie_timing": ["10:30am", "1:45pm", "4:45pm", "8:30pm", "11:45pm"],
       "show_times": [
         {
           "loaction": "City Center Almaza",
-          "times": [
-            "1:45pm",
-            "4:45pm",
-            "8:30pm",
-            "11:45pm"
-          ]
+          "times": ["1:45pm", "4:45pm", "8:30pm", "11:45pm"]
         },
         {
           "loaction": "Mall Of Egypt",
-          "times": [
-            "1:45pm",
-            "4:45pm"
-          ]
+          "times": ["1:45pm", "4:45pm"]
         },
         {
           "loaction": "City Center Alexandria",
-          "times": [
-            "1:45pm",
-            "4:45pm",
-            "8:30pm"
-          ]
+          "times": ["1:45pm", "4:45pm", "8:30pm"]
         }
       ]
     },
@@ -105,13 +86,7 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
-      ]
+      "movie_timing": ["10:30am", "1:45pm", "4:45pm", "8:30pm", "11:45pm"]
     },
     {
       "id": "3",
@@ -129,13 +104,7 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
-      ]
+      "movie_timing": ["10:30am", "1:45pm", "4:45pm", "8:30pm", "11:45pm"]
     },
     {
       "id": "4",
@@ -153,13 +122,7 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
-      ]
+      "movie_timing": ["10:30am", "1:45pm", "4:45pm", "8:30pm", "11:45pm"]
     },
     {
       "id": "5",
@@ -177,13 +140,7 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
-      ]
+      "movie_timing": ["10:30am", "1:45pm", "4:45pm", "8:30pm", "11:45pm"]
     },
     {
       "id": "6",
@@ -201,13 +158,7 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
-      ]
+      "movie_timing": ["10:30am", "1:45pm", "4:45pm", "8:30pm", "11:45pm"]
     },
     {
       "id": "7",
@@ -225,13 +176,7 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
-      ]
+      "movie_timing": ["10:30am", "1:45pm", "4:45pm", "8:30pm", "11:45pm"]
     },
     {
       "id": "8",
@@ -249,13 +194,7 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
-      ]
+      "movie_timing": ["10:30am", "1:45pm", "4:45pm", "8:30pm", "11:45pm"]
     },
     {
       "id": "9",
@@ -273,13 +212,7 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
-      ]
+      "movie_timing": ["10:30am", "1:45pm", "4:45pm", "8:30pm", "11:45pm"]
     },
     {
       "id": "10",
@@ -297,13 +230,7 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
-      ]
+      "movie_timing": ["10:30am", "1:45pm", "4:45pm", "8:30pm", "11:45pm"]
     },
     {
       "id": "11",
@@ -321,13 +248,7 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
-      ]
+      "movie_timing": ["10:30am", "1:45pm", "4:45pm", "8:30pm", "11:45pm"]
     },
     {
       "id": "12",
@@ -345,13 +266,7 @@
       "rating": "5",
       "reviews": [],
       "seats": "",
-      "movie_timing": [
-        "10:30am",
-        "1:45pm",
-        "4:45pm",
-        "8:30pm",
-        "11:45pm"
-      ]
+      "movie_timing": ["10:30am", "1:45pm", "4:45pm", "8:30pm", "11:45pm"]
     }
   ]
 }

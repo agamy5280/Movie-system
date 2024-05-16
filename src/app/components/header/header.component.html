@@ -1,50 +1,104 @@
-
-    <nav class="navbar main-nav navbar-expand-lg navbar-dark mb-3">
-      <div class="container-fluid container-main">
-        <a class="navbar-brand" routerLink="/"><img class="logo" src="assets/images/logo-dark.png"></a>
-        <button class="navbar-toggler" type="button" style="color: #009ddb;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item ps-3">
-              <a class="nav-link active fw-bold text-uppercase item-hover" aria-current="page" routerLink="/">Home</a>
+<nav class="navbar main-nav navbar-expand-lg navbar-dark mb-3">
+  <div class="container-fluid container-main">
+    <a class="navbar-brand" routerLink="/"
+      ><img class="logo" src="assets/images/logo-dark.png"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      style="color: #009ddb"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item ps-3">
+          <a
+            class="nav-link active fw-bold text-uppercase item-hover"
+            aria-current="page"
+            routerLink="/"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item dropdown ps-3">
+          <a
+            class="nav-link active item-hover text-uppercase fw-bold dropdown-toggle"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Movies
+          </a>
+          <ul class="dropdown-menu ms-3" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item text-uppercase" routerLink="/"
+                >What's On</a
+              >
             </li>
-            <li class="nav-item dropdown ps-3">
-              <a class="nav-link active item-hover text-uppercase fw-bold dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Movies
-              </a>
-              <ul class="dropdown-menu ms-3" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item text-uppercase" routerLink="/">What's On</a></li>
-                <li><a class="dropdown-item text-uppercase" routerLink="/">Coming Soon</a></li>
-              </ul>
+            <li>
+              <a class="dropdown-item text-uppercase" routerLink="/"
+                >Coming Soon</a
+              >
             </li>
           </ul>
-          @if(currentUser == null){
-            <ul class="navbar-nav ms-auto trans">
-              <li class="nav-item trans">
-                <a class="nav-link trans item-hover active fw-bold text-uppercase ps-3" (click)="login()">Login</a>
-              </li>
-              <li class="nav-item trans">
-                <a class="nav-link trans item-hover active fw-bold text-uppercase ps-3" routerLink="/register">Sign-up</a>
-              </li>
-            </ul>
-          }@else {
-            <ul class="navbar-nav trans ms-auto trans">
-              <li class="nav-item dropdown trans">
-                <a class="ps-3 nav-link dropdown-toggle trans item-hover text-uppercase fw-bold active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  My Account
-                </a>
-                <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" routerLink="/profile/{{currentUser.id}}">Profile</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" routerLink="/">Last Reservations</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
-                </ul>
-              </li>
-            </ul>
-          }
-        </div>
-      </div>
+        </li>
+      </ul>
+      @if(currentUser == null){
+      <ul class="navbar-nav ms-auto trans">
+        <li class="nav-item trans">
+          <a
+            class="nav-link trans item-hover active fw-bold text-uppercase ps-3"
+            (click)="login()"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item trans">
+          <a
+            class="nav-link trans item-hover active fw-bold text-uppercase ps-3"
+            routerLink="/register"
+            >Sign-up</a
+          >
+        </li>
+      </ul>
+      }@else {
+      <ul class="navbar-nav trans ms-auto trans">
+        <li class="nav-item dropdown trans">
+          <a
+            class="ps-3 nav-link dropdown-toggle trans item-hover text-uppercase fw-bold active"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            My Account
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" id="click" (click)="goToProfilePage()"
+                >Profile</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" id="click" routerLink="/"
+                >Last Reservations</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" id="click" (click)="logout()">Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      }
+    </div>
+  </div>
 </nav>
