@@ -9,6 +9,7 @@
   margin: 0 auto;
   border-radius: 5px;
   color: #322c2b;
+  font-weight: bold;
 }
 .movie-container {
   display: flex;
@@ -42,6 +43,11 @@
   padding: 20px;
   font-size: 1.1rem;
   font-family: Arial, sans-serif;
+  .desc {
+    max-width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .btn-book {
