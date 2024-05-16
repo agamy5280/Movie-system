@@ -3,10 +3,30 @@ $--nav-bar-background: black ;
     font-family: "Effra", Tahoma, Arial, Helvetica, sans-serif !important;
     background-color: #1a1b1d;
 }
-.main-nav{
-    color: var(--color-text) !important;
-    padding: 20px;
-}
+// .main-nav:after {
+//     content: "";
+//     background: #fff !important;
+//     transition: all 0.8s;
+//     position: absolute;
+//     height: 120%;
+//     width: 12px;
+//     opacity: 0.7;
+//     left: -35%;
+//     top: -10%;
+//     // transform: rotate(15deg);
+// }
+// .main-nav{
+//     color: var(--color-text) !important;
+//     padding: 20px;
+//     transition: color 0.15s ease-in-out,
+//     background-color 0.15s ease-in-out,
+//     border-color 0.15s ease-in-out,
+//     box-shadow 0.15s ease-in-out;
+//     position: relative;
+// }
+// .main-nav:hover:after{
+//     left: 130%;
+// }
 .container-main{
     max-width: 950px;
 }
@@ -24,4 +44,3 @@ $--nav-bar-background: black ;
     height: 40px;
     width: 120px;
 }
-
