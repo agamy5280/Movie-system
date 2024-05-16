@@ -20,7 +20,7 @@ export class ProfileEditComponent {
       this._router.navigate(['log-in']);
     }
   }
-  myform = new FormGroup({
+  editProfileForm = new FormGroup({
     firstName: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
@@ -31,34 +31,31 @@ export class ProfileEditComponent {
       Validators.minLength(3),
       Validators.pattern('[A-Za-z]+'),
     ]),
-    phoneNumber: new FormControl(0, [
+    phoneNumber: new FormControl('', [
       Validators.required,
-      Validators.min(1000000000),
-      Validators.max(99999999999),
+      Validators.pattern(/^01/),
+      Validators.minLength(10),
+      Validators.maxLength(20),
       Validators.pattern('[0-9]+'),
     ]),
     email: new FormControl('', [Validators.email, Validators.required]),
   });
-  add() {
-    if (!this.myform.valid) {
-      alert('wrong data');
-    } else {
-      alert('valid data');
-      this.usersService
-        .updateObjectById(this.userID, this.myform.value)
-        .subscribe();
-    }
-  }
   ngOnInit(): void {
     this.route.queryParams.subscribe(async (params) => {
       this.userID = params['id'];
       (await this.usersService.getUser(this.userID)).subscribe({
         next: (data: any) => {
-          console.log(data);
-
           this.Udata = data;
         },
       });
     });
+  }
+  editProfle() {
+    this.usersService
+      .updateObjectById(this.userID, this.editProfileForm.value)
+      .subscribe(() => {
+        alert('Profile Updated!');
+        this._router.navigate(['/movies']);
+      });
   }
 }
