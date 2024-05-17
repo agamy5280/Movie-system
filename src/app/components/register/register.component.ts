@@ -5,11 +5,10 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrl: './register.component.scss'
-
+  styleUrl: './register.component.scss',
 })
 export class RegisterComponent {
-  constructor(private userSerivce : UsersService, private _router: Router) { }
+  constructor(private userSerivce: UsersService, private _router: Router) {}
 
   registerForm = new FormGroup({
     firstName: new FormControl('', [
@@ -31,25 +30,28 @@ export class RegisterComponent {
     ]),
     password: new FormControl('', [
       Validators.required,
-      Validators.minLength(8)
+      Validators.minLength(8),
     ]),
     email: new FormControl('', [Validators.required, Validators.email]),
   });
 
-  submitDetails(){
+  submitDetails() {
     //console.log(this.registerForm.value);
     //const postData = {...this.registerForm.value};
     //this.authService.registerUser(postData as User).subscribe(
-      //response => console.log(response),
-     // error => console.log(error)
+    //response => console.log(response),
+    // error => console.log(error)
 
-      
     //)
-    console.log(this.registerForm.value)
-    this.userSerivce.registerUser(this.registerForm.value).subscribe(()=> {
-      alert('Register Completed!');
-      this._router.navigate(['/log-in']);
-    })
+    console.log(this.registerForm.value);
+    const newUserData = this.userSerivce
+      .registerUser({
+        ...this.registerForm.value,
+        'past-reservation': [],
+      })
+      .subscribe(() => {
+        alert('Register Completed!');
+        this._router.navigate(['/log-in']);
+      });
   }
-   
 }

@@ -7,8 +7,18 @@
       "email": "sadadsaa@hotmail.com",
       "phoneNumber": "000000",
       "password": "00000000",
-      "past-reservation": []
-       
+      "past-reservation": [
+        {
+          "id": "1",
+          "time": "1:45pm",
+          "location": "City Center Almaza",
+          "seats": [
+            "4A",
+            "4B",
+            "4C"
+          ]
+        }
+      ]
     },
     {
       "firstName": "ali",
@@ -47,6 +57,38 @@
       "phoneNumber": "01223715457",
       "password": "123456789",
       "email": "marwan@hotmail.com"
+    },
+    {
+      "id": "2c61",
+      "firstName": "Marwan",
+      "lastName": "ElAgamy",
+      "phoneNumber": "01223715457",
+      "password": "123456789",
+      "email": "marawan.agamy2010@hotmail.com",
+      "past-reservation": [
+        {
+          "id": "2",
+          "time": "1:45pm",
+          "location": "City Center Almaza",
+          "seats": [
+            "1A",
+            "1B",
+            "1C",
+            "1D"
+          ]
+        },
+        {
+          "id": "2",
+          "time": "1:45pm",
+          "location": "City Center Almaza",
+          "seats": [
+            "1A",
+            "1B",
+            "1C",
+            "1D"
+          ]
+        }
+      ]
     }
   ],
   "movies": [
