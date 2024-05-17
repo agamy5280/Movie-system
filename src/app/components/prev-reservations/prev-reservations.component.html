@@ -1,0 +1,10 @@
+<div class="now-showing"> 
+    <div class="row">
+        <h1 class="what">Past Reservation</h1>
+        <p class="dashed pb-2"></p>
+    </div>
+
+    @for (res of allReservations; track $index) {
+        <app-reservation [reservation]="res"></app-reservation>
+    }
+</div>

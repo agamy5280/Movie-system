@@ -1,0 +1,17 @@
+
+<div class="movie-sec">
+    <div class=" sec-img ">
+        <img src="assets/images/{{movie.movie_image}}" alt="">
+    </div> 
+    <div class="sec-details">
+        <div class="title">
+            <h3 >Movie Name: {{movie.title}}</h3>
+        </div>
+        <div class="info">
+            <p>Time: <span>{{reservation.time}}</span></p>
+            <p>Location: <span>{{reservation.location}}</span></p>
+            <p>seats: <span>{{reservation.seats}}</span></p>
+            <p>Price: <span>{{reservation.seats.length * 100}}</span></p>
+        </div>
+    </div>
+</div>
