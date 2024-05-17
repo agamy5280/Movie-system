@@ -4,15 +4,14 @@
     <li><strong>ID:</strong> {{ movieDetails.id }}</li>
     <li><strong>Time:</strong> {{ movieDetails.time }}</li>
     <li><strong>Location:</strong> {{ movieDetails.location }}</li>
-    <li><strong>Seats:</strong>
+    <li>
+      <strong>Seats:</strong>
       <ul>
         @for(seat of movieDetails.seats; track seat) {
-          <li>{{ seat }}</li>
+        <li>{{ seat }}</li>
         }
-
       </ul>
     </li>
   </ul>
-  <button class="close-btn" (click)="onClose()">Close</button>
-
+  <button class="close-btn" (click)="onClose()">Confirm</button>
 </div>
