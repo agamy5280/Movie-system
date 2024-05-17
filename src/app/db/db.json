@@ -7,18 +7,8 @@
       "email": "sadadsaa@hotmail.com",
       "phoneNumber": "000000",
       "password": "00000000",
-      "past-reservation": [
-        {
-          "id": "1",
-          "time": "1:45pm",
-          "location": "City Center Almaza",
-          "seats": [
-            "4A",
-            "4B",
-            "4C"
-          ]
-        }
-      ]
+      "past-reservation": []
+       
     },
     {
       "firstName": "ali",
