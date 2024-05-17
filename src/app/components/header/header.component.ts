@@ -37,4 +37,5 @@ export class HeaderComponent implements OnInit {
       queryParams: { id: this.currentUser?.id },
     });
   }
+  
 }

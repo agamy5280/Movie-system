@@ -17,6 +17,7 @@ export class SeatsComponent implements OnInit {
   movieTime: any;
   movieData: any;
   movieLocation: any;
+  movieName: any;
   constructor(
     private route: ActivatedRoute,
     private _router: Router,
@@ -39,6 +40,7 @@ export class SeatsComponent implements OnInit {
         next: (data) => {
           this.movieData = data;
           this.movieImg = data.movie_image;
+          this.movieName = data.title;
         },
       });
     });
@@ -79,9 +81,11 @@ export class SeatsComponent implements OnInit {
     this._router.navigate(['/confirm'], {
       queryParams: {
         id: this.movieID,
+        title: this.movieName,
         time: this.movieTime,
         location: this.movieLocation,
         seats: this.selectedSeats,
+        price: this.calculateTicketPrice(),
       },
     });
   }

@@ -15,6 +15,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 import { ConfirmComponent } from './components/confirm/confirm.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { PrevReservationsComponent } from './components/prev-reservations/prev-reservations.component';
+import { ReservationComponent } from './components/prev-reservations/reservation/reservation.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     LoginPageComponent,
     ProfileEditComponent,
     RegisterComponent,
+    PrevReservationsComponent,
+    ReservationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule,MatSnackBarModule],
   providers: [],

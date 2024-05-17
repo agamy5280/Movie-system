@@ -11,6 +11,7 @@ import { ProfileEditComponent } from './components/profile-edit/profile-edit.com
 import { RegisterComponent } from './components/register/register.component';
 import { ConfirmComponent } from './components/confirm/confirm.component';
 import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
+import { PrevReservationsComponent } from './components/prev-reservations/prev-reservations.component';
 const routes: Routes = [
   { path: 'log-in', component: LoginPageComponent },
   { path: '', component: HomeComponent },
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'soon', component: ComingSoonComponent },
   { path: 'confirm', component: ConfirmComponent },
+  { path: 'reservations', component: PrevReservationsComponent},
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
