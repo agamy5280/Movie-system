@@ -66,6 +66,12 @@ export class UsersService {
   updateObjectById(id: number, updatedObject: any): Observable<any> {
     return this.http.patch<any>(`${this.DB_U_url}/${id}`, updatedObject);
   }
+
+
+
+  updateSpecificValue(id: number, partialUpdateObject: any) {
+    return this.http.patch(`${this.DB_U_url}/${id}`, partialUpdateObject, { headers: { 'Content-Type': 'application/json' } });
+  }
   logIn(email: any, pass: any) {
     console.log(this.USERS);
     for (let i = 0; i < this.USERS.length; i++) {
@@ -74,10 +80,10 @@ export class UsersService {
         if (user.password == pass) {
           return user;
         } else {
-          return 2;
+          return 1;
         }
       } else if (i === this.USERS.length - 1) {
-        return 1;
+        return 2;
       }
     }
   }
