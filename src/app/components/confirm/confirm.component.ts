@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { UsersService } from '../../services/users.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
   selector: 'app-confirm',
@@ -12,9 +13,10 @@ export class ConfirmComponent implements OnInit {
   movieDetails: any;
   r_user: any;
   past_res: any;
-
+  movieObject:any;
   constructor(
     private userService: UsersService,
+    private movieService: MovieService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
@@ -35,6 +37,14 @@ export class ConfirmComponent implements OnInit {
         },
       });
     });
+
+    this.movieService.getShowTimes(this.movieDetails.id).subscribe({
+      next: (data) => {
+          this.movieObject = data;
+      },
+      error: (err) => console.log(err),
+    });
+
   }
 
   onClose() {
