@@ -9,13 +9,13 @@
 
 
                 <div class="form-group d-flex m-3">
-                    <input formControlName="email" class="form-control" type="text">
+                    <input  placeholder="Enter Email" formControlName="email" class="form-control" type="text">
 
                 </div>
 
 
                 <ng-container *ngIf="Log_in_Form.controls['email'].touched">
-                    <p
+                    <p style="color: red;"
                       class="invalid-info"
                       *ngIf="Log_in_Form.controls['email']?.errors?.['required']"
                     >
@@ -23,7 +23,7 @@
                     </p>
                   </ng-container>
                   <ng-container *ngIf="Log_in_Form.controls['email'].touched">
-                    <p
+                    <p style="color: red;"
                       class="invalid-info"
                       *ngIf="Log_in_Form.controls['email']?.errors?.['email']"
                     >
@@ -58,7 +58,7 @@
                 </div>
 
                 <ng-container *ngIf="Log_in_Form.controls['pass'].touched">
-                    <p
+                    <p style="color: red;"
                       class="invalid-info"
                       *ngIf="Log_in_Form.controls['pass']?.errors?.['required']"
                     >
@@ -67,7 +67,7 @@
                   </ng-container>
 
                   <ng-container *ngIf="Log_in_Form.controls['pass'].touched">
-                    <p
+                    <p style="color: red;"
                       class="invalid-info"
                       *ngIf="Log_in_Form.controls['pass']?.errors?.['minLength']"
                     >
