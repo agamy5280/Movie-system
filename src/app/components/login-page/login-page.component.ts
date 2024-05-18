@@ -56,7 +56,5 @@ export class LoginPageComponent {
   get PassValid() {
     return this.Log_in_Form.controls['pass'].valid;
   }
-  toggleShowPassword() {
-    this.showPassword = !this.showPassword;
-  }
+  
 }
