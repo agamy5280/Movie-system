@@ -7,92 +7,96 @@
   /></a>
 
   <h4 style="margin-bottom: 10px">Sign into your account</h4>
-  <div class="row">
-    <div class="col">
-      <div [formGroup]="Log_in_Form" class="form">
-        <div class="form-group d-flex m-3">
-          <input
-            placeholder="Enter Email"
-            formControlName="email"
-            class="form-control"
-            type="text"
-          />
+  <div class="my-container">
+    <div class="row">
+      <div class="col">
+        <div [formGroup]="Log_in_Form" class="form">
+          <div class="form-group d-flex m-3">
+            <input
+              placeholder="Enter Email"
+              formControlName="email"
+              class="form-control"
+              type="text"
+            />
+          </div>
+
+          <ng-container *ngIf="Log_in_Form.controls['email'].touched">
+            <p
+              style="color: red"
+              class="invalid-info"
+              *ngIf="Log_in_Form.controls['email']?.errors?.['required']"
+            >
+              Please type your Email!
+            </p>
+          </ng-container>
+          <ng-container *ngIf="Log_in_Form.controls['email'].touched">
+            <p
+              style="color: red"
+              class="invalid-info"
+              *ngIf="Log_in_Form.controls['email']?.errors?.['email']"
+            >
+              The Email Must Be In Email Form!
+            </p>
+          </ng-container>
+
+          <div class="form-group d-flex m-3">
+            <input
+              type="{{ showPassword ? 'text' : 'password' }}"
+              id="password"
+              class="form-control"
+              formControlName="pass"
+              type="password"
+              (input)="passwordChange.emit()"
+              placeholder="Enter password"
+            />
+
+            <button
+              id="btn-showpassword"
+              type="button"
+              (click)="toggleShowPassword()"
+              class="password-show-toggle"
+            >
+              <i class="fas fa-eye-slash" *ngIf="!showPassword"></i>
+              <i class="fas fa-eye" *ngIf="showPassword"></i>
+              SHOW PASSWORD
+            </button>
+          </div>
+
+          <ng-container *ngIf="Log_in_Form.controls['pass'].touched">
+            <p
+              style="color: red"
+              class="invalid-info"
+              *ngIf="Log_in_Form.controls['pass']?.errors?.['required']"
+            >
+              Please type your password!
+            </p>
+          </ng-container>
+
+          <ng-container *ngIf="Log_in_Form.controls['pass'].touched">
+            <p
+              style="color: red"
+              class="invalid-info"
+              *ngIf="Log_in_Form.controls['pass']?.errors?.['minLength']"
+            >
+              Password must be minimum 8 charcters !
+            </p>
+          </ng-container>
+
+          <div class="text-center m-3">
+            <input
+              id="btn-login"
+              (click)="logIn()"
+              class="btn btn-outline-success"
+              type="submit"
+              value="Log-In"
+              [disabled]="!Log_in_Form.valid"
+            />
+          </div>
+          <p>don`t have an acount?</p>
+          <a routerLinkActive="active" routerLink="/register" class="nav-link"
+            >Sign Up</a
+          >
         </div>
-
-        <ng-container *ngIf="Log_in_Form.controls['email'].touched">
-          <p
-            style="color: red"
-            class="invalid-info"
-            *ngIf="Log_in_Form.controls['email']?.errors?.['required']"
-          >
-            Please type your Email!
-          </p>
-        </ng-container>
-        <ng-container *ngIf="Log_in_Form.controls['email'].touched">
-          <p
-            style="color: red"
-            class="invalid-info"
-            *ngIf="Log_in_Form.controls['email']?.errors?.['email']"
-          >
-            The Email Must Be In Email Form!
-          </p>
-        </ng-container>
-
-        <div class="form-group d-flex m-3">
-          <input
-            type="{{ showPassword ? 'text' : 'password' }}"
-            id="password"
-            class="form-control"
-            formControlName="pass"
-            type="password"
-            (input)="passwordChange.emit()"
-            placeholder="Enter password"
-          />
-
-          <button
-            type="button"
-            (click)="toggleShowPassword()"
-            class="password-show-toggle"
-          >
-            <i class="fas fa-eye-slash" *ngIf="!showPassword"></i>
-            <i class="fas fa-eye" *ngIf="showPassword"></i>
-            SHOW PASSWORD
-          </button>
-        </div>
-
-        <ng-container *ngIf="Log_in_Form.controls['pass'].touched">
-          <p
-            style="color: red"
-            class="invalid-info"
-            *ngIf="Log_in_Form.controls['pass']?.errors?.['required']"
-          >
-            Please type your password!
-          </p>
-        </ng-container>
-
-        <ng-container *ngIf="Log_in_Form.controls['pass'].touched">
-          <p
-            style="color: red"
-            class="invalid-info"
-            *ngIf="Log_in_Form.controls['pass']?.errors?.['minLength']"
-          >
-            Password must be minimum 8 charcters !
-          </p>
-        </ng-container>
-
-        <div class="text-center m-3">
-          <input
-            (click)="logIn()"
-            class="btn btn-outline-success"
-            type="submit"
-            value="Log-In"
-            [disabled]="!Log_in_Form.valid"
-          />
-        </div>
-        <p>don`t have an acount?</p>
-        <a routerLinkActive="active" routerLink="/register" class="nav-link"
-          >Sign Up</a
-        >
       </div>
     </div>
   </div>

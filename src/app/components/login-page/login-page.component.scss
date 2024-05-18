@@ -29,6 +29,17 @@ input[type="password"] {
   border-radius: 3px;
   box-sizing: border-box;
   font-size: 16px;
-  background-color: black;
-  color: white;
+}
+#btn-showpassword {
+  margin-left: 10px;
+}
+.my-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  #btn-login {
+    width: 35%;
+  }
 }

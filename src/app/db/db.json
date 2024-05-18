@@ -88,6 +88,21 @@
             "4G"
           ],
           "price": "400"
+        },
+        {
+          "id": "9",
+          "title": "LAND OF BAD",
+          "time": "8:30pm",
+          "location": "City Center Alexandria",
+          "seats": [
+            "5B",
+            "5D",
+            "5E",
+            "5G",
+            "5F",
+            "5C"
+          ],
+          "price": "600"
         }
       ]
     }
