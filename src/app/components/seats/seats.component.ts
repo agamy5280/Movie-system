@@ -26,10 +26,6 @@ export class SeatsComponent implements OnInit {
     this.leftSeats = this.generateSeatData(5, 4);
     this.middleSeats = this.generateSeatData(5, 8);
     this.rightSeats = this.generateSeatData(5, 4);
-    // checking if path seats is active.
-    if (_router.url == '/seats') {
-      this._router.navigate(['movies']);
-    }
   }
   ngOnInit(): void {
     this.route.queryParams.subscribe(async (params) => {

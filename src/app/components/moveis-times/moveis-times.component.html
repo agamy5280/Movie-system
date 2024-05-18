@@ -1,22 +1,16 @@
 <div class="now-showing">
-    <h2 class="movie-name">{{movieName}}</h2>
-    <p class="dashed pb-2"></p>
-    <div class="row location-bar">
-        <!-- <ul>
-            <li>
-                <p class="selected">Today</p>
-            </li>
-        </ul> -->
+  <h2 class="movie-name">{{ movieName }}</h2>
+  <p class="dashed pb-2"></p>
+  <div class="row location-bar"></div>
+
+  <div class="row timerow" *ngFor="let day of times">
+    <h3 class="weekday">{{ day.loaction }}</h3>
+    <div class="col timecol">
+      @for (time of day.times; track $index) {
+      <a class="btn" (click)="sendParams(time, day.loaction)" role="button">{{
+        time
+      }}</a>
+      }
     </div>
-
-
-
-        <div class="row timerow" *ngFor="let day of times" >
-            <h3 class="weekday">{{day.loaction}}</h3>
-            <div class="col timecol">
-                @for (time of day.times; track $index) {
-                    <a class="btn"  (click) = "sendParams(time, day.loaction)" role="button">{{time}}</a>
-                }
-            </div>
-       
+  </div>
 </div>

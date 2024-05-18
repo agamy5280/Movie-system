@@ -13,7 +13,7 @@ export class ConfirmComponent implements OnInit {
   movieDetails: any;
   r_user: any;
   past_res: any;
-  movieObject:any;
+  movieObject: any;
   constructor(
     private userService: UsersService,
     private movieService: MovieService,
@@ -40,20 +40,13 @@ export class ConfirmComponent implements OnInit {
 
     this.movieService.getShowTimes(this.movieDetails.id).subscribe({
       next: (data) => {
-          this.movieObject = data;
+        this.movieObject = data;
       },
       error: (err) => console.log(err),
     });
-
   }
 
   onClose() {
-    //fn -> getPastrev []
-    //[newRes]
-    //arr.push(...getPastrev, ...newRes)
-
-    console.log(this.past_res);
-
     this.userService
       .updateObjectById(this.user.id, this.r_user)
       .subscribe(() => {

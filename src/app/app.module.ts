@@ -32,7 +32,14 @@ import { ReservationComponent } from './components/prev-reservations/reservation
     PrevReservationsComponent,
     ReservationComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule,MatSnackBarModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatSnackBarModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
