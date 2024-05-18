@@ -67,6 +67,15 @@
           "price": "400"
         }
       ]
+    },
+    {
+      "id": "7b33",
+      "firstName": "mido",
+      "lastName": "ali",
+      "phoneNumber": "0122342873",
+      "password": "12345678",
+      "email": "test@email.com",
+      "past-reservation": []
     }
   ],
   "movies": [
