@@ -17,6 +17,7 @@ export class SeatsComponent implements OnInit {
   movieTime: any;
   movieData: any;
   movieLocation: any;
+  movieName: any;
   constructor(
     private route: ActivatedRoute,
     private _router: Router,
@@ -25,10 +26,6 @@ export class SeatsComponent implements OnInit {
     this.leftSeats = this.generateSeatData(5, 4);
     this.middleSeats = this.generateSeatData(5, 8);
     this.rightSeats = this.generateSeatData(5, 4);
-    // checking if path seats is active.
-    if (_router.url == '/seats') {
-      this._router.navigate(['movies']);
-    }
   }
   ngOnInit(): void {
     this.route.queryParams.subscribe(async (params) => {
@@ -39,6 +36,7 @@ export class SeatsComponent implements OnInit {
         next: (data) => {
           this.movieData = data;
           this.movieImg = data.movie_image;
+          this.movieName = data.title;
         },
       });
     });
@@ -79,9 +77,11 @@ export class SeatsComponent implements OnInit {
     this._router.navigate(['/confirm'], {
       queryParams: {
         id: this.movieID,
+        title: this.movieName,
         time: this.movieTime,
         location: this.movieLocation,
         seats: this.selectedSeats,
+        price: this.calculateTicketPrice(),
       },
     });
   }

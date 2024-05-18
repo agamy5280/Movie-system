@@ -1,17 +1,32 @@
-<div class="booking-details">
-  <h2>Booking Details</h2>
-  <ul>
-    <li><strong>ID:</strong> {{ movieDetails.id }}</li>
-    <li><strong>Time:</strong> {{ movieDetails.time }}</li>
-    <li><strong>Location:</strong> {{ movieDetails.location }}</li>
-    <li>
-      <strong>Seats:</strong>
-      <ul>
-        @for(seat of movieDetails.seats; track seat) {
-        <li>{{ seat }}</li>
-        }
-      </ul>
-    </li>
-  </ul>
-  <button class="close-btn" (click)="onClose()">Confirm</button>
+<div class="now-showing">
+  <div class="what">
+    <h3>Booking Details</h3>
+  </div>
+
+  <div class="movie-sec">
+    <div class="sec-details">
+      <div class="title">
+        <h4>
+          {{ movieObject.title }}
+        </h4>
+      </div>
+      <div class="info">
+        <p>
+          Time: <span>{{ movieDetails.time }}</span>
+        </p>
+        <p>
+          Location: <span>{{ movieDetails.location }}</span>
+        </p>
+        <p>
+          Seats: @for(seat of movieDetails.seats; track seat) {
+          <span>{{ seat }}, </span>
+          }
+        </p>
+      </div>
+      <button class="btn" (click)="onClose()">Confirm</button>
+    </div>
+    <div class="sec-img">
+      <img src="assets/images/{{ movieObject.movie_image }}" alt="" />
+    </div>
+  </div>
 </div>

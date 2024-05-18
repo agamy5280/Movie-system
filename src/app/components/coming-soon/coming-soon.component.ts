@@ -5,12 +5,15 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-coming-soon',
   templateUrl: './coming-soon.component.html',
-  styleUrl: './coming-soon.component.scss'
+  styleUrl: './coming-soon.component.scss',
 })
-export class ComingSoonComponent implements OnInit{
-  allMovies:any;
-  link:any = "https://www.youtube.com/embed/er3h_STlp-k";
-  constructor(private sanitizer: DomSanitizer, private movieService: MovieService){}
+export class ComingSoonComponent implements OnInit {
+  allMovies: any;
+  link: any = 'https://www.youtube.com/embed/er3h_STlp-k';
+  constructor(
+    private sanitizer: DomSanitizer,
+    private movieService: MovieService
+  ) {}
 
   ngOnInit(): void {
     this.movieService.getAllMovies().subscribe({
@@ -24,9 +27,6 @@ export class ComingSoonComponent implements OnInit{
   }
 
   getSafeUrl(url: string): SafeResourceUrl {
-    
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  } 
-
-
+  }
 }

@@ -20,15 +20,14 @@ export class MoveisTimesComponent implements OnInit {
     private router: Router
   ) {
     this.route.queryParams.subscribe({
-      next: data => this.id = data['id']
-    })
-  }
-  sendParams(time: any, location:any) {
-    this.router.navigate(['/seats'], {
-      queryParams: { time: time, id: this.id, location:location },
+      next: (data) => (this.id = data['id']),
     });
   }
-
+  sendParams(time: any, location: any) {
+    this.router.navigate(['/seats'], {
+      queryParams: { time: time, id: this.id, location: location },
+    });
+  }
 
   ngOnInit(): void {
     this.movieService.getShowTimes(this.id).subscribe({

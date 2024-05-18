@@ -67,10 +67,10 @@ export class UsersService {
     return this.http.patch<any>(`${this.DB_U_url}/${id}`, updatedObject);
   }
 
-
-
   updateSpecificValue(id: number, partialUpdateObject: any) {
-    return this.http.patch(`${this.DB_U_url}/${id}`, partialUpdateObject, { headers: { 'Content-Type': 'application/json' } });
+    return this.http.patch(`${this.DB_U_url}/${id}`, partialUpdateObject, {
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
   logIn(email: any, pass: any) {
     console.log(this.USERS);

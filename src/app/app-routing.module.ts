@@ -11,32 +11,40 @@ import { ProfileEditComponent } from './components/profile-edit/profile-edit.com
 import { RegisterComponent } from './components/register/register.component';
 import { ConfirmComponent } from './components/confirm/confirm.component';
 import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
+import { PrevReservationsComponent } from './components/prev-reservations/prev-reservations.component';
+import { routingGuard } from './guard/routing-guard.guard';
 const routes: Routes = [
-  { path: 'log-in', component: LoginPageComponent },
   { path: '', component: HomeComponent },
   { path: 'movies', component: HomeComponent },
-  { path: 'movie', component: MoviePageComponent },
+  { path: 'movie', component: MoviePageComponent, canActivate: [routingGuard] },
   {
     path: 'profile',
     component: ProfileEditComponent,
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard, routingGuard],
   },
   {
     path: 'seats',
     component: SeatsComponent,
-    canActivate: [AuthGuard],
-    children: [
-      {
-        path: ':times',
-        component: SeatsComponent,
-      },
-    ],
+    canActivate: [AuthGuard, routingGuard],
   },
-  { path: 'times', component: MoveisTimesComponent },
+  {
+    path: 'times',
+    component: MoveisTimesComponent,
+    canActivate: [routingGuard],
+  },
   { path: 'log-in', component: LoginPageComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'soon', component: ComingSoonComponent },
-  { path: 'confirm', component: ConfirmComponent },
+  {
+    path: 'confirm',
+    component: ConfirmComponent,
+    canActivate: [AuthGuard, routingGuard],
+  },
+  {
+    path: 'reservations',
+    component: PrevReservationsComponent,
+    canActivate: [AuthGuard],
+  },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
