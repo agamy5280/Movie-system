@@ -16,8 +16,7 @@ import { Router, RouterModule } from '@angular/router';
   styleUrl: './login-page.component.scss',
 })
 export class LoginPageComponent {
-  @Input() label: string = '';
-  @Output() passwordChange = new EventEmitter<string>();
+
   showPassword = false;
   constructor(private server: UsersService, private router: Router) {}
 
