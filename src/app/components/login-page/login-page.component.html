@@ -41,25 +41,10 @@
 
           <div class="form-group d-flex m-3">
             <input
-              type="{{ showPassword ? 'text' : 'password' }}"
-              id="password"
               class="form-control"
-              formControlName="pass"
               type="password"
-              (input)="passwordChange.emit()"
               placeholder="Enter password"
             />
-
-            <button
-              id="btn-showpassword"
-              type="button"
-              (click)="toggleShowPassword()"
-              class="password-show-toggle"
-            >
-              <i class="fas fa-eye-slash" *ngIf="!showPassword"></i>
-              <i class="fas fa-eye" *ngIf="showPassword"></i>
-              SHOW PASSWORD
-            </button>
           </div>
 
           <ng-container *ngIf="Log_in_Form.controls['pass'].touched">

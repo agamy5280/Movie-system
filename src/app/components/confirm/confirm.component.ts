@@ -23,7 +23,7 @@ export class ConfirmComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
-      this.movieDetails = params;
+      this.movieDetails = params;   
       this.userService.getUsersByid(this.user.id).subscribe({
         next: (data) => {
           this.r_user = data;
