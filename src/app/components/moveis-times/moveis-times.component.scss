@@ -1,127 +1,126 @@
-.timecol{
-    // display: flex;
-    gap: 10px;
-    margin-top: 20px;
-    margin-bottom: 15px;
+.timecol {
+  // display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
-.timecol::before{
-    content: "Standard";
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
+.timecol::before {
+  content: "Standard";
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
-.timerow{
- margin-top: 10px;
- margin-bottom: 2%;
+.timerow {
+  margin-top: 10px;
+  margin-bottom: 2%;
 }
-.btn{
-    color: rgb(255, 255, 255);
-    background-color: #d40f7d;
-    height: 20px !important;
-    height: 1.5rem !important;
-    padding: 0 10px 0 14px;
-    font-size: 14px;
-    margin-right: 10px;
-    border-left: 1px solid black;
-    position: relative;
-
+.btn {
+  color: rgb(255, 255, 255);
+  background-color: #d40f7d;
+  height: 20px !important;
+  height: 1.5rem !important;
+  padding: 0 10px 0 14px;
+  font-size: 14px;
+  margin-right: 10px;
+  border-left: 1px solid black;
+  position: relative;
 }
-.btn::before{
-    content: "";
-    position: absolute;
-    left: -3px; /* Adjust this value according to your design */
-    top: 2px;
-    width: 10px; /* Adjust this value according to your design */
-    height: 80%;
-    background-color: #262729;
-    border-radius: 50%;
+.btn::before {
+  content: "";
+  position: absolute;
+  left: -3px; /* Adjust this value according to your design */
+  top: 2px;
+  width: 10px; /* Adjust this value according to your design */
+  height: 80%;
+  background-color: #262729;
+  border-radius: 50%;
 }
-.btn:hover{
-    background-color: #7e0a4c;
-}
-
-h3.weekday{
-    font-size: 1.3rem;
-    line-height: 1.75rem;
-    font-weight: bold;
-    font-family: "Effra";
-    position: relative;
-}
-h3.weekday::before{
-    background-color: #009ddb;
-    content: "";
-    display: block;
-    height: 3px;
-    width: 60px;  
-    position: absolute;
-    top: -15px;
-}
-.location-bar{
-    margin-bottom: 1%;
-    margin-top: 4%;
-}
-.location-bar p{
-    color: rgb(150, 150, 150) !important;
-}
-.location-bar p.selected{
-    color: #33c5ff !important;
+.btn:hover {
+  background-color: #7e0a4c;
 }
 
-.location-bar ul{
-    position: relative;
-    display: flex;
-    gap: 3%;
-    list-style: none;
-    font-size: 0.9rem;
+h3.weekday {
+  font-size: 1.3rem;
+  line-height: 1.75rem;
+  font-weight: bold;
+  font-family: "Effra";
+  position: relative;
 }
-.location-bar ul::before{
-    background-color: rgb(60, 60, 60);
-    content: "";
-    display: block;
-    height: 1px;
-    width: 100%;
-    position: absolute;
-    top: -15px;
+h3.weekday::before {
+  background-color: #009ddb;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60px;
+  position: absolute;
+  top: -15px;
 }
-.location-bar ul::after{
-    background-color: rgb(60, 60, 60);
-    content: "";
-    display: block;
-    height: 1px;
-    width: 100%;
-    position: absolute;
-    top: 30px;
+.location-bar {
+  margin-bottom: 1%;
+  margin-top: 4%;
 }
-.location-bar ul p:hover{
-    color: #009ddb !important;
-    cursor: pointer;
+.location-bar p {
+  color: rgb(150, 150, 150) !important;
 }
-.movie-name{
-    font-size: 1.375rem;
-    line-height: 1.75rem;
-    font-weight: bold;
-    font-family: "Effra";
-    margin-top: 4%;
-    position: relative;
-}
-.movie-name::before{
-    background-color: #009ddb;
-    content: "";
-    display: block;
-    height: 3px;
-    width: 60px;  
-    position: absolute;
-    top: -15px;
+.location-bar p.selected {
+  color: #33c5ff !important;
 }
 
-.now-showing{
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
+.location-bar ul {
+  position: relative;
+  display: flex;
+  gap: 3%;
+  list-style: none;
+  font-size: 0.9rem;
+}
+.location-bar ul::before {
+  background-color: rgb(60, 60, 60);
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: -15px;
+}
+.location-bar ul::after {
+  background-color: rgb(60, 60, 60);
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 30px;
+}
+.location-bar ul p:hover {
+  color: #009ddb !important;
+  cursor: pointer;
+}
+.movie-name {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  font-weight: bold;
+  font-family: "Effra";
+  margin-top: 4%;
+  position: relative;
+}
+.movie-name::before {
+  background-color: #009ddb;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60px;
+  position: absolute;
+  top: -15px;
 }
 
-.dashed{
-    width: 60%;
-    border-bottom: 1px dashed #515254;
+.now-showing {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dashed {
+  width: 60%;
+  border-bottom: 1px dashed #515254;
 }

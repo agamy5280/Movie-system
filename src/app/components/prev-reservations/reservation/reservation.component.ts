@@ -8,7 +8,7 @@ import { MovieService } from '../../../services/movie.service';
 })
 export class ReservationComponent implements OnInit {
   @Input() reservation: any;
-  movie: any;
+  movie: any = [];
   constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {

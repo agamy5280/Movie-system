@@ -36,14 +36,6 @@ export class RegisterComponent {
   });
 
   submitDetails() {
-    //console.log(this.registerForm.value);
-    //const postData = {...this.registerForm.value};
-    //this.authService.registerUser(postData as User).subscribe(
-    //response => console.log(response),
-    // error => console.log(error)
-
-    //)
-    console.log(this.registerForm.value);
     const newUserData = this.userSerivce
       .registerUser({
         ...this.registerForm.value,

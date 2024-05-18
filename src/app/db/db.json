@@ -67,6 +67,29 @@
           "price": "400"
         }
       ]
+    },
+    {
+      "id": "84e8",
+      "firstName": "Marwan",
+      "lastName": "Agamy",
+      "phoneNumber": "01223715457",
+      "password": "123456789",
+      "email": "marwan@hotmail.com",
+      "past-reservation": [
+        {
+          "id": "1",
+          "title": "KINGDOM OF THE PLANET OF THE APES",
+          "time": "4:45pm",
+          "location": "City Center Alexandria",
+          "seats": [
+            "4D",
+            "4E",
+            "4F",
+            "4G"
+          ],
+          "price": "400"
+        }
+      ]
     }
   ],
   "movies": [

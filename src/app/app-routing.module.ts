@@ -38,7 +38,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'soon', component: ComingSoonComponent },
   { path: 'confirm', component: ConfirmComponent },
-  { path: 'reservations', component: PrevReservationsComponent},
+  { path: 'reservations', component: PrevReservationsComponent },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 

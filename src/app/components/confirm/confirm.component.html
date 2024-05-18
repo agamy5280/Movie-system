@@ -1,51 +1,32 @@
 <div class="now-showing">
   <div class="what">
-    <h3 >Booking Details</h3>
+    <h3>Booking Details</h3>
   </div>
 
   <div class="movie-sec">
     <div class="sec-details">
       <div class="title">
         <h4>
-          {{movieObject.title}}
+          {{ movieObject.title }}
         </h4>
       </div>
       <div class="info">
-        <p>Time: <span>{{ movieDetails.time }}</span></p>
-          <p>Location: <span>{{ movieDetails.location }}</span></p>
-          <p>Seats: 
-          @for(seat of movieDetails.seats; track seat) {
-            <span>{{ seat }}, </span>
+        <p>
+          Time: <span>{{ movieDetails.time }}</span>
+        </p>
+        <p>
+          Location: <span>{{ movieDetails.location }}</span>
+        </p>
+        <p>
+          Seats: @for(seat of movieDetails.seats; track seat) {
+          <span>{{ seat }}, </span>
           }
         </p>
-        
       </div>
       <button class="btn" (click)="onClose()">Confirm</button>
     </div>
-    <div class=" sec-img ">
-      <img  src="assets/images/{{movieObject.movie_image }}" alt="">
+    <div class="sec-img">
+      <img src="assets/images/{{ movieObject.movie_image }}" alt="" />
     </div>
   </div>
-  <!-- <p class="dashed pb-2"></p> -->
 </div>
-<!-- <table class="table table-borderless">
-  <thead >
-    <tr>
-      <th>Time</th>
-      <th>Location</th>
-      <th>Seats</th>
-
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ movieDetails.time }}</td>
-      <td>{{ movieDetails.location }}</td>
-      <td>
-        @for(seat of movieDetails.seats; track seat) {
-          {{ seat }}
-        }
-      </td>
-    </tr>
-  </tbody>
-</table> -->
