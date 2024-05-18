@@ -41,15 +41,10 @@
 
           <div class="form-group d-flex m-3">
             <input
-              type="{{ showPassword ? 'text' : 'password' }}"
-              id="password"
               class="form-control"
-              formControlName="pass"
               type="password"
               placeholder="Enter password"
             />
-
-            
           </div>
 
           <ng-container *ngIf="Log_in_Form.controls['pass'].touched">
