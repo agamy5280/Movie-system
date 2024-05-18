@@ -7,7 +7,7 @@ import { map } from 'rxjs';
 export class MovieService {
   private readonly DB_LINK: string;
   constructor(private http: HttpClient) {
-    this.DB_LINK = 'http://localhost:3000/movies';
+    this.DB_LINK = 'https://json-angular-v1.onrender.com/movies';
   }
   getShowTimes(id: number) {
     return this.http.get(this.DB_LINK + '/' + id);
