@@ -10,7 +10,7 @@ export class UsersService {
   USERS: any;
   private userSubject: BehaviorSubject<User | null>;
   user: User | null = null;
-  private DB_U_url = 'http://localhost:3000/users';
+  private DB_U_url = 'https://json-angular-v1.onrender.com/users';
 
   constructor(private http: HttpClient) {
     if (localStorage.getItem('userData')) {
