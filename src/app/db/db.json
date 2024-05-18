@@ -54,7 +54,7 @@
       "lastName": "Agamy",
       "phoneNumber": "01223715457",
       "password": "123456789",
-      "email": "marwan@hotmail.com",
+      "email": "marwan1@hotmail.com",
       "past-reservation": [
         {
           "id": "1",
@@ -76,9 +76,25 @@
           "id": "3",
           "title": "SHEQO",
           "time": "1:45pm",
-          "location": "City Starts",
+          "location": "City Stars",
           "seats": ["4E"],
           "price": "100"
+        },
+        {
+          "id": "12",
+          "title": "CIVIL WAR",
+          "time": "4:45pm",
+          "location": "Mall Of Egypt",
+          "seats": ["5D", "5C"],
+          "price": "200"
+        },
+        {
+          "id": "7",
+          "title": "KUNG FU PANDA 4",
+          "time": "4:45pm",
+          "location": "City Center Alexandria",
+          "seats": ["4G", "4F"],
+          "price": "200"
         }
       ]
     },
@@ -174,7 +190,7 @@
       "seats": "",
       "show_times": [
         {
-          "loaction": "City Starts",
+          "loaction": "City Stars",
           "times": ["1:45pm", "4:45pm", "8:30pm"]
         },
         {
@@ -209,7 +225,7 @@
       "seats": "",
       "show_times": [
         {
-          "loaction": "City Starts",
+          "loaction": "City Stars",
           "times": ["1:45pm", "4:45pm", "8:30pm"]
         },
         {
@@ -244,7 +260,7 @@
       "seats": "",
       "show_times": [
         {
-          "loaction": "City Starts",
+          "loaction": "City Stars",
           "times": ["1:45pm", "4:45pm", "8:30pm"]
         },
         {
@@ -294,7 +310,7 @@
       "seats": "",
       "show_times": [
         {
-          "loaction": "City Starts",
+          "loaction": "City Stars",
           "times": ["1:45pm", "4:45pm", "8:30pm"]
         },
         {
@@ -329,7 +345,7 @@
       "seats": "",
       "show_times": [
         {
-          "loaction": "City Starts",
+          "loaction": "City Stars",
           "times": ["1:45pm", "4:45pm", "8:30pm"]
         },
         {
@@ -364,7 +380,7 @@
       "seats": "",
       "show_times": [
         {
-          "loaction": "City Starts",
+          "loaction": "City Stars",
           "times": ["1:45pm", "4:45pm", "8:30pm"]
         },
         {
@@ -399,7 +415,7 @@
       "seats": "",
       "show_times": [
         {
-          "loaction": "City Starts",
+          "loaction": "City Stars",
           "times": ["1:45pm", "4:45pm", "8:30pm"]
         },
         {
@@ -434,7 +450,7 @@
       "seats": "",
       "show_times": [
         {
-          "loaction": "City Starts",
+          "loaction": "City Stars",
           "times": ["1:45pm", "4:45pm", "8:30pm"]
         },
         {
@@ -469,7 +485,7 @@
       "seats": "",
       "show_times": [
         {
-          "loaction": "City Starts",
+          "loaction": "City Stars",
           "times": ["1:45pm", "4:45pm", "8:30pm"]
         },
         {
